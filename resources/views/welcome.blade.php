@@ -11,7 +11,7 @@
     <body>
         <div id="app">
             <navbar-component></navbar-component>
-            <div style="background:linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url('https://freerangestock.com/sample/120965/overhead-view-of-a-laptop-and-a-stethoscope--medical-work.jpg');height:400px;width:100%; background-size:cover; ">
+            <div style="background:linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url('https://freerangestock.com/sample/120965/overhead-view-of-a-laptop-and-a-stethoscope--medical-work.jpg');height:600px;width:100%; background-size:cover; ">
 
             </div>
 
