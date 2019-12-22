@@ -15,6 +15,7 @@ class Lesions extends Migration
     {
         Schema::create('lesions', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('reference');
             $table->unsignedBigInteger('collection_id');
             $table->enum('dx',['akiec','bcc','bkl','df','mel','nv','vasc']);
             $table->enum('dx_type',['histo','follow-up','consensus','confocal']);

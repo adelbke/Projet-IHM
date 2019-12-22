@@ -15,10 +15,14 @@ class Images extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('lesion_id');
+            $table->string('lesion_reference');
             $table->string('path');
-            $table->string('small_path');
+            $table->string('small_path')->nullable();
+            $table->foreign('id');
+            
+
             $table->timestamps();
+
         });
     }
 
