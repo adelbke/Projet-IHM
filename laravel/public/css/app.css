@@ -1,4 +1,4 @@
-/*!
+@import url(https://fonts.googleapis.com/css?family=Bitter&display=swap);/*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
@@ -11355,8 +11355,8 @@ a.text-dark:focus {
 }
 
 .hvr-underline:hover {
-  -webkit-text-decoration: underline #fff;
-          text-decoration: underline #fff;
+  -webkit-text-decoration: underline #000;
+          text-decoration: underline #000;
 }
 
 .hvr-underline-left-to-right:hover {
@@ -11373,7 +11373,7 @@ a.text-dark:focus {
   transition: width 0.3s ease 0s;
   position: relative;
   width: 0;
-  background: #fff;
+  background: #000;
 }
 
 .hvr-underline-left-to-right:hover:after {
@@ -11395,7 +11395,7 @@ a.text-dark:focus {
   -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
-  background: none repeat scroll 0 0 #fff;
+  background: none repeat scroll 0 0 #000;
 }
 
 .hvr-underline-right-to-left:hover:after {
@@ -11417,7 +11417,7 @@ a.text-dark:focus {
   -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
-  background: none repeat scroll 0 0 #fff;
+  background: none repeat scroll 0 0 #000;
 }
 
 .hvr-underline-center-out:hover:after {
@@ -11439,7 +11439,7 @@ a.text-dark:focus {
   -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
-  background: none repeat scroll 0 0 #fff;
+  background: none repeat scroll 0 0 #000;
 }
 
 .hvr-y-right-to-left:hover:after {
@@ -11457,7 +11457,7 @@ a.text-dark:focus {
   -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
-  background: none repeat scroll 0 0 #fff;
+  background: none repeat scroll 0 0 #000;
 }
 
 .hvr-y-right-to-left:hover:before {
@@ -11479,7 +11479,7 @@ a.text-dark:focus {
   -webkit-transition: width 0.3s ease 0s;
   transition: width 0.3s ease 0s;
   width: 0;
-  background: none repeat scroll 0 0 #fff;
+  background: none repeat scroll 0 0 #000;
 }
 
 .hvr-y-left-to-right:hover:after {
@@ -11495,7 +11495,7 @@ a.text-dark:focus {
   -webkit-transition: width 0.3s ease 0s;
   transition: width 0.3s ease 0s;
   width: 0;
-  background: none repeat scroll 0 0 #fff;
+  background: none repeat scroll 0 0 #000;
 }
 
 .hvr-y-left-to-right:hover:before {
@@ -11516,7 +11516,7 @@ a.text-dark:focus {
   -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
-  background: none repeat scroll 0 0 #fff;
+  background: none repeat scroll 0 0 #000;
 }
 
 .hvr-y-center-out:hover:after {
@@ -11534,7 +11534,7 @@ a.text-dark:focus {
   -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
-  background: none repeat scroll 0 0 #fff;
+  background: none repeat scroll 0 0 #000;
 }
 
 .hvr-y-center-out:hover:before {

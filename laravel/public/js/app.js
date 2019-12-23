@@ -6486,7 +6486,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.nav-link[data-v-34ccf5d3]{\n    text-shadow: 0px 0px 50px black;\n}\n\n", ""]);
+exports.push([module.i, "\n.nav-link[data-v-34ccf5d3]{\r\n    text-shadow: 0px 0px 50px black;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -38058,58 +38058,54 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c(
-      "nav",
-      { staticClass: "navbar fixed-top navbar-expand-lg bg-transparent" },
-      [
-        _c("a", { staticClass: "navbar-brand mr-5", attrs: { href: "#" } }, [
-          _vm._v("Logo\n        ")
-        ]),
-        _vm._v(" "),
-        _vm._m(0),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "collapse navbar-collapse",
-            attrs: { id: "collapsibleNavId" }
-          },
-          [
-            _c(
-              "ul",
-              { staticClass: "navbar-nav mx-auto mt-2 mt-lg-0" },
-              _vm._l(_vm.links, function(item) {
-                return _c(
-                  "li",
-                  { key: item.name, staticClass: "nav-item mx-2" },
-                  [
-                    !Array.isArray(item)
-                      ? _c(
-                          "a",
-                          {
-                            staticClass:
-                              "nav-link text-shadow font-weight-bold text-white hvr-underline-center-out hvr-grow",
-                            attrs: { href: item.href },
-                            domProps: { textContent: _vm._s(item.name) }
-                          },
-                          [
-                            _c("span", { staticClass: "sr-only" }, [
-                              _vm._v("(current)")
-                            ])
-                          ]
-                        )
-                      : _vm._e()
-                  ]
-                )
-              }),
-              0
-            ),
-            _vm._v(" "),
-            _vm._m(1)
-          ]
-        )
-      ]
-    )
+    _c("nav", { staticClass: "navbar fixed-top navbar-expand-lg bg-white" }, [
+      _c("a", { staticClass: "navbar-brand mr-5", attrs: { href: "#" } }, [
+        _vm._v("Logo\r\n        ")
+      ]),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "collapse navbar-collapse",
+          attrs: { id: "collapsibleNavId" }
+        },
+        [
+          _c(
+            "ul",
+            { staticClass: "navbar-nav mx-auto mt-2 mt-lg-0" },
+            _vm._l(_vm.links, function(item) {
+              return _c(
+                "li",
+                { key: item.name, staticClass: "nav-item mx-2" },
+                [
+                  !Array.isArray(item)
+                    ? _c(
+                        "a",
+                        {
+                          staticClass:
+                            "nav-link text-shadow font-weight-bold text-dark hvr-underline-center-out hvr-grow",
+                          attrs: { href: item.href },
+                          domProps: { textContent: _vm._s(item.name) }
+                        },
+                        [
+                          _c("span", { staticClass: "sr-only" }, [
+                            _vm._v("(current)")
+                          ])
+                        ]
+                      )
+                    : _vm._e()
+                ]
+              )
+            }),
+            0
+          ),
+          _vm._v(" "),
+          _vm._m(1)
+        ]
+      )
+    ])
   ])
 }
 var staticRenderFns = [
@@ -50556,8 +50552,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/adel/laravelTutorial/projet-n1-ihm/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/adel/laravelTutorial/projet-n1-ihm/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\wamp64\www\ihm_adel\projet-n1-ihm\laravel\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\wamp64\www\ihm_adel\projet-n1-ihm\laravel\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

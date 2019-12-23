@@ -1,6 +1,6 @@
 <template>
 <div>
-    <nav class="navbar fixed-top navbar-expand-lg bg-transparent">
+    <nav class="navbar fixed-top navbar-expand-lg bg-white">
         <a class="navbar-brand mr-5" href="#">Logo
         </a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
                 <li class="nav-item mx-2" v-for="item in links" v-bind:key="item.name">
-                    <a v-if="!Array.isArray(item)" class="nav-link text-shadow font-weight-bold text-white hvr-underline-center-out hvr-grow" v-text="item.name" v-bind:href="item.href"> <span class="sr-only">(current)</span></a>
+                    <a v-if="!Array.isArray(item)" class="nav-link text-shadow font-weight-bold text-dark hvr-underline-center-out hvr-grow" v-text="item.name" v-bind:href="item.href"> <span class="sr-only">(current)</span></a>
                 </li>
                 
             </ul>
