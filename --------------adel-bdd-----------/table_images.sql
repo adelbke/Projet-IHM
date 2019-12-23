@@ -43,7 +43,7 @@ SET time_zone = "+00:00";
 -- Déchargement des données de la table `base_image`
 --
 
-INSERT INTO `base_image` (`lesion_reference`, `path`,`created_at`,`updated_at`) VALUES
+INSERT INTO `images` (`lesion_reference`, `path`,`created_at`,`updated_at`) VALUES
 ('HAM_0000118', 'ISIC_0027419.jpg',NOW(),NOW()),
 ('HAM_0000118', 'ISIC_0025030.jpg',NOW(),NOW()),
 ('HAM_0002730', 'ISIC_0026769.jpg',NOW(),NOW()),
