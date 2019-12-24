@@ -1,29 +1,15 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-// Variables
-@import 'variables';
-
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
-
-
-// old
-//
-
-@import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
-$font-family: 'Bitter', serif;
-
-
-// Custom modifications
-
-@import 'custom.scss';
-
-// Dependencies
+@import url('https://fonts.googleapis.com/css?family=Bitter:400,700&display=swap&subset=latin-ext');
+$font-family-base: 'Bitter', serif;
 
 // Bootstrap
 @import '~bootstrap-scss/bootstrap.scss';
-// @import '../../node_modules/bootstrap-scss/bootstrap.scss';
+
+// Dependencies
+
+
 
 // text-hover.css
 @import '~hover-text.css/scss/text-hover.scss';
@@ -32,3 +18,6 @@ $font-family: 'Bitter', serif;
 @import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
 @import '~@fortawesome/fontawesome-free/scss/solid.scss';
 // $fa-font-path: "../webfonts";
+
+// Variables
+@import 'variables';

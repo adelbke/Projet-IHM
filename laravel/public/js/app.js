@@ -6486,7 +6486,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.nav-link[data-v-34ccf5d3]{\r\n    text-shadow: 0px 0px 50px black;\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n.nav-link[data-v-34ccf5d3]{\n    text-shadow: 0px 0px 50px black;\n}\n\n", ""]);
 
 // exports
 
@@ -38060,7 +38060,7 @@ var render = function() {
   return _c("div", [
     _c("nav", { staticClass: "navbar fixed-top navbar-expand-lg bg-white" }, [
       _c("a", { staticClass: "navbar-brand mr-5", attrs: { href: "#" } }, [
-        _vm._v("Logo\r\n        ")
+        _vm._v("Logo\n        ")
       ]),
       _vm._v(" "),
       _vm._m(0),
@@ -50552,8 +50552,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\wamp64\www\ihm_adel\projet-n1-ihm\laravel\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\wamp64\www\ihm_adel\projet-n1-ihm\laravel\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/adel/laravelTutorial/projet-n1-ihm/laravel/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/adel/laravelTutorial/projet-n1-ihm/laravel/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
