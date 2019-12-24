@@ -36,3 +36,8 @@ Vue.component('navbar-component',require('./components/layout/NavbarComponent.vu
 const app = new Vue({
     el: '#app',
 });
+
+
+$(document).ready(function() {
+    $('.mdb-select').materialSelect();
+    })
