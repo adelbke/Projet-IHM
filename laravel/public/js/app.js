@@ -50343,6 +50343,9 @@ Vue.component('navbar-component', __webpack_require__(/*! ./components/layout/Na
 var app = new Vue({
   el: '#app'
 });
+$(document).ready(function () {
+  $('.mdb-select').materialSelect();
+});
 
 /***/ }),
 

@@ -19,5 +19,24 @@ $font-family-base: 'Bitter', serif;
 @import '~@fortawesome/fontawesome-free/scss/solid.scss';
 // $fa-font-path: "../webfonts";
 
-// Variables
-@import 'variables';
+
+
+
+/************    le main      ***************/
+
+.main-acc{
+    position: relative;
+    top: -2.25em;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 75em;
+    max-height: 78px;
+    min-height: 78px;
+    padding: 1.5em 0;
+    overflow: hidden;
+    z-index: 2;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-bottom: 1px solid #eaeaea;
+    background-color: white;
+}
