@@ -26,6 +26,7 @@ import 'bootstrap';
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('navbar-component',require('./components/layout/NavbarComponent.vue').default);
+Vue.component('content-component',require('./components/contentComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -38,6 +39,3 @@ const app = new Vue({
 });
 
 
-$(document).ready(function() {
-    $('.mdb-select').materialSelect();
-    })
