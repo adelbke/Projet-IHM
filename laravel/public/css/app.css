@@ -17402,8 +17402,16 @@ readers do not read off random characters that represent icons */
 /************    le main      ***************/
 
 .main-acc {
+<<<<<<< Updated upstream
   display: flex;
   align-items: center;
+=======
+<<<<<<< Updated upstream
+=======
+  display: flex;
+  align-items: center;
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
   position: relative;
   top: -2.25em;
   width: 100%;
@@ -17420,8 +17428,16 @@ readers do not read off random characters that represent icons */
   background-color: white;
 }
 
+<<<<<<< Updated upstream
 
 
+=======
+<<<<<<< Updated upstream
+=======
+
+
+/**************   icon  **************/
+>>>>>>> Stashed changes
 
 @font-face {
   font-family: 'icomoon';
@@ -17474,4 +17490,9 @@ readers do not read off random characters that represent icons */
   width: 100%;
   max-width: 75em;
   margin: 0 auto;
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes

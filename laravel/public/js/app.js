@@ -1915,6 +1915,9 @@ __webpack_require__.r(__webpack_exports__);
         name: 'Contact',
         href: '/Contact'
       }, {
+        name: 'login',
+        href: '/register'
+      }, {
         name: 'À propos',
         href: '/about'
       }]
@@ -6486,7 +6489,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.nav-link[data-v-34ccf5d3]{\n    text-shadow: 0px 0px 50px black;\n}\n\n", ""]);
+exports.push([module.i, "\n.nav-link[data-v-34ccf5d3]{\r\n    text-shadow: 0px 0px 50px black;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -38060,7 +38063,7 @@ var render = function() {
   return _c("div", [
     _c("nav", { staticClass: "navbar fixed-top navbar-expand-lg bg-white" }, [
       _c("a", { staticClass: "navbar-brand mr-5", attrs: { href: "#" } }, [
-        _vm._v("Logo\n        ")
+        _vm._v("Logo\r\n        ")
       ]),
       _vm._v(" "),
       _vm._m(0),
@@ -38102,7 +38105,30 @@ var render = function() {
             0
           ),
           _vm._v(" "),
-          _vm._m(1)
+          _c("div", { staticClass: "form-inline" }, [
+            _c(
+              "div",
+              { staticClass: "nav-item border-right pr-2 border-right" },
+              [
+                _c(
+                  "a",
+                  {
+                    key: _vm.links.login,
+                    staticClass: "btn btn-primary rounded-0 text-white p-1",
+                    attrs: {
+                      name: "",
+                      id: "",
+                      href: _vm.links.href,
+                      role: "button"
+                    }
+                  },
+                  [_vm._v("S'inscrire")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _vm._m(1)
+          ])
         ]
       )
     ])
@@ -38133,28 +38159,15 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-inline" }, [
-      _c("div", { staticClass: "nav-item border-right pr-2 border-right" }, [
-        _c(
-          "a",
-          {
-            staticClass: "btn btn-primary rounded-0 text-white p-1",
-            attrs: { name: "", id: "", href: "#", role: "button" }
-          },
-          [_vm._v("S'inscrire")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "nav-item" }, [
-        _c(
-          "a",
-          {
-            staticClass: "btn btn-link",
-            attrs: { name: "", id: "", href: "#", role: "button" }
-          },
-          [_vm._v("Se Connecter")]
-        )
-      ])
+    return _c("div", { staticClass: "nav-item" }, [
+      _c(
+        "a",
+        {
+          staticClass: "btn btn-link",
+          attrs: { name: "", id: "", href: "#", role: "button" }
+        },
+        [_vm._v("Se Connecter")]
+      )
     ])
   }
 ]
@@ -50544,7 +50557,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\n\r\n@import '~@fortawesome/fontawesome-free/scss/solid.scss';\r\n                                                        ^\r\n      Invalid CSS after '... \"../webfonts\";': expected 1 selector or at-rule, was \"<<<<<<< HEAD\"\r\n      in C:\\wamp64\\www\\projet-n1-ihm\\laravel\\resources\\sass\\app.scss (line 19, column 58)\n    at C:\\wamp64\\www\\projet-n1-ihm\\laravel\\node_modules\\webpack\\lib\\NormalModule.js:316:20\n    at C:\\wamp64\\www\\projet-n1-ihm\\laravel\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at C:\\wamp64\\www\\projet-n1-ihm\\laravel\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (C:\\wamp64\\www\\projet-n1-ihm\\laravel\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at Object.callback (C:\\wamp64\\www\\projet-n1-ihm\\laravel\\node_modules\\sass-loader\\dist\\index.js:89:7)\n    at Object.done [as callback] (C:\\wamp64\\www\\projet-n1-ihm\\laravel\\node_modules\\neo-async\\async.js:8067:18)\n    at options.error (C:\\wamp64\\www\\projet-n1-ihm\\laravel\\node_modules\\node-sass\\lib\\index.js:294:32)");
 
 /***/ }),
 
@@ -50555,8 +50568,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/adel/laravelTutorial/projet-n1-ihm/laravel/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/adel/laravelTutorial/projet-n1-ihm/laravel/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\wamp64\www\projet-n1-ihm\laravel\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\wamp64\www\projet-n1-ihm\laravel\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
