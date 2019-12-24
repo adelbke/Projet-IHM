@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        {{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -70,7 +70,16 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> --}}
+
+        @auth
+            <navbar-component first-name="{{auth()->user()->Firstname}}"
+                last-name="{{auth()->user()->Lastname}}" 
+                csrf="{{ csrf_token() }}"></navbar-component>
+        @endauth
+        @guest
+            <navbar-component></navbar-component>
+        @endguest
 
         <main class="py-4">
             @yield('content')

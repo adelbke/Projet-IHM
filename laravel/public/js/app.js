@@ -1965,8 +1965,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['first-name', 'last-name', 'csrf'],
   data: function data() {
     return {
       links: [{
@@ -6547,7 +6564,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n************  main  ****************\r\n\r\n.main-acc[data-v-fbd30662] {\r\n  display: -webkit-box;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n          align-items: center;\r\n  position: relative;\r\n  top: -2.25em;\r\n  width: 100%;\r\n  margin: 0 auto;\r\n  max-width: 75em;\r\n  max-height: 78px;\r\n  min-height: 78px;\r\n  padding: 1.5em 0;\r\n  overflow: hidden;\r\n  z-index: 2;\r\n  border-top-right-radius: 3px;\r\n  border-top-left-radius: 3px;\r\n  border-bottom: 1px solid #eaeaea;\r\n  background-color: white;\n}\n************  icon ****************\r\n\r\n\r\n************  main contenu ****************\r\n.main[data-v-fbd30662]{\r\n  position: relative;\r\n  top:-2.25em;\r\n  margin-top: -2.25em;\r\n  margin-bottom: 2.25em;\r\n  padding: 2.25em 0 3em;\r\n  border-radius: 3px;\r\n  background-color: white;\r\n  width: 100%;\r\n  max-width: 75em;\r\n  margin: 0 auto;\n}\n.co[data-v-fbd30662]{\r\n    background: var(--light);\n}\n.main-acc-tit[data-v-fbd30662]{\r\n    display: inline;\n}\r\n", ""]);
+exports.push([module.i, "\n************  main  ****************\n\n.main-acc[data-v-fbd30662] {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-align: center;\n          align-items: center;\n  position: relative;\n  top: -2.25em;\n  width: 100%;\n  margin: 0 auto;\n  max-width: 75em;\n  max-height: 78px;\n  min-height: 78px;\n  padding: 1.5em 0;\n  overflow: hidden;\n  z-index: 2;\n  border-top-right-radius: 3px;\n  border-top-left-radius: 3px;\n  border-bottom: 1px solid #eaeaea;\n  background-color: white;\n}\n************  icon ****************\n\n\n************  main contenu ****************\n.main[data-v-fbd30662]{\n  position: relative;\n  top:-2.25em;\n  margin-top: -2.25em;\n  margin-bottom: 2.25em;\n  padding: 2.25em 0 3em;\n  border-radius: 3px;\n  background-color: white;\n  width: 100%;\n  max-width: 75em;\n  margin: 0 auto;\n}\n.co[data-v-fbd30662]{\n    background: var(--light);\n}\n.main-acc-tit[data-v-fbd30662]{\n    display: inline;\n}\n", ""]);
 
 // exports
 
@@ -6566,7 +6583,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.nav-link[data-v-34ccf5d3]{\r\n    text-shadow: 0px 0px 50px black;\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n.nav-link[data-v-34ccf5d3]{\n    text-shadow: 0px 0px 50px black;\n}\n\n", ""]);
 
 // exports
 
@@ -38278,8 +38295,8 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("nav", { staticClass: "navbar fixed-top navbar-expand-lg bg-white" }, [
-      _c("a", { staticClass: "navbar-brand mr-5", attrs: { href: "#" } }, [
-        _vm._v("Logo\r\n        ")
+      _c("a", { staticClass: "navbar-brand mr-5", attrs: { href: "/" } }, [
+        _vm._v("Logo\n        ")
       ]),
       _vm._v(" "),
       _vm._m(0),
@@ -38304,7 +38321,7 @@ var render = function() {
                         "a",
                         {
                           staticClass:
-                            "nav-link text-shadow font-weight-bold text-dark hvr-underline-center-out hvr-grow",
+                            "nav-link font-weight-bold text-dark hvr-underline-center-out hvr-grow",
                           attrs: { href: item.href },
                           domProps: { textContent: _vm._s(item.name) }
                         },
@@ -38321,7 +38338,71 @@ var render = function() {
             0
           ),
           _vm._v(" "),
-          _vm._m(1)
+          _vm.firstName == undefined && _vm.lastName == undefined
+            ? _c("div", { staticClass: "form-inline" }, [
+                _vm._m(1),
+                _vm._v(" "),
+                _vm._m(2)
+              ])
+            : _c("div", { staticClass: "form-inline" }, [
+                _c("div", { staticClass: "dropdown border rounded" }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-link text-dark dropdown-toggle",
+                      attrs: {
+                        type: "button",
+                        id: "triggerId",
+                        "data-toggle": "dropdown",
+                        "aria-haspopup": "true",
+                        "aria-expanded": "false"
+                      },
+                      domProps: {
+                        textContent: _vm._s(
+                          "Bonjour, " + _vm.firstName + " " + _vm.lastName
+                        )
+                      }
+                    },
+                    [
+                      _vm._v(
+                        "\n                                Dropdown\n                            "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "dropdown-menu",
+                      attrs: { "aria-labelledby": "triggerId" }
+                    },
+                    [
+                      _c(
+                        "form",
+                        {
+                          staticClass: "dropdown-item",
+                          attrs: { action: "/logout", method: "post" }
+                        },
+                        [
+                          _c("input", {
+                            attrs: { type: "hidden", name: "_token" },
+                            domProps: { value: _vm.csrf }
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "button",
+                            {
+                              staticClass: "btn btn-link",
+                              attrs: { type: "submit" }
+                            },
+                            [_vm._v("logout")]
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ])
+              ])
         ]
       )
     ])
@@ -38352,28 +38433,34 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-inline" }, [
-      _c("div", { staticClass: "nav-item border-right pr-2 border-right" }, [
+    return _c(
+      "div",
+      { staticClass: "nav-item border-right pr-2 border-right" },
+      [
         _c(
           "a",
           {
             staticClass: "btn btn-primary rounded-0 text-white p-1",
-            attrs: { name: "", id: "", href: "#", role: "button" }
+            attrs: { name: "", id: "", href: "/register", role: "button" }
           },
           [_vm._v("S'inscrire")]
         )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "nav-item" }, [
-        _c(
-          "a",
-          {
-            staticClass: "btn btn-link",
-            attrs: { name: "", id: "", href: "#", role: "button" }
-          },
-          [_vm._v("Se Connecter")]
-        )
-      ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "nav-item" }, [
+      _c(
+        "a",
+        {
+          staticClass: "btn btn-link",
+          attrs: { name: "", id: "", href: "/login", role: "button" }
+        },
+        [_vm._v("Se Connecter")]
+      )
     ])
   }
 ]
@@ -50859,8 +50946,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\wamp64\www\ihm_adel\projet-n1-ihm\laravel\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\wamp64\www\ihm_adel\projet-n1-ihm\laravel\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/adel/laravelTutorial/projet-n1-ihm/laravel/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/adel/laravelTutorial/projet-n1-ihm/laravel/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
