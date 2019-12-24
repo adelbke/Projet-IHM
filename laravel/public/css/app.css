@@ -70,7 +70,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #f7f7f7;
+  background-color: #fff;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -17402,8 +17402,6 @@ readers do not read off random characters that represent icons */
 /************    le main      ***************/
 
 .main-acc {
-  display: flex;
-  align-items: center;
   position: relative;
   top: -2.25em;
   width: 100%;
@@ -17420,59 +17418,3 @@ readers do not read off random characters that represent icons */
   background-color: white;
 }
 
-
-
-/**************   icon  **************/
-
-@font-face {
-  font-family: 'icomoon';
-  src:  url('../fonts/fonts/search.eot?h2ylbr');
-  src:  url('../fonts/fonts/search.eot?h2ylbr#iefix') format('embedded-opentype'),
-    url('../fonts/fonts/search.ttf?h2ylbr') format('truetype'),
-    url('../fonts/fonts/search.woff?h2ylbr') format('woff'),
-    url('../fonts/fonts/search.svg?h2ylbr#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-search:before {
-  content: "\e986";
-}
-
-.icon{
-  font-size: 32px;
-  color: black;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-
-/************  main contenu ****************/
-.main{
-  position: relative;
-  top:-2.25em;
-  margin-top: -2.25em;
-  margin-bottom: 2.25em;
-  padding: 2.25em 0 3em;
-  border-radius: 3px;
-  background-color: white;
-  width: 100%;
-  max-width: 75em;
-  margin: 0 auto;
-}
