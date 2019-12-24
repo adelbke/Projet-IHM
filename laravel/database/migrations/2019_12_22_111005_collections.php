@@ -15,8 +15,11 @@ class Collections extends Migration
     {
         Schema::create('collections', function (Blueprint $table) {
             $table->bigIncrements('id');
-            
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
+
+            // Constraints
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

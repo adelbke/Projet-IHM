@@ -15,7 +15,6 @@ class Lesions extends Migration
     {
         Schema::create('lesions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('reference');
             $table->unsignedBigInteger('collection_id');
             $table->enum('dx',['akiec','bcc','bkl','df','mel','nv','vasc']);
             $table->enum('dx_type',['histo','follow-up','consensus','confocal']);
@@ -23,6 +22,8 @@ class Lesions extends Migration
             $table->enum('sex',['male','female','unknown']);
             $table->unsignedInteger('age');
             $table->timestamps();
+
+            $table->foreign('collection_id')->references('id')->on('collections');
         });
     }
 
