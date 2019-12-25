@@ -1,6 +1,6 @@
 <template>
 <div>
-    <nav class="navbar fixed-top navbar-expand-lg bg-white">
+    <nav class="navbar sticky-top navbar-expand-lg bg-white">
         <a class="navbar-brand mr-5" href="/">Logo
         </a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,8 +77,6 @@ export default {
 </script>
 
 <style scoped>
-.nav-link{
-    text-shadow: 0px 0px 50px black;
-}
+
 
 </style>

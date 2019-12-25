@@ -1,38 +1,34 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>IHM</title>
-
-        <link rel="stylesheet" href="css/app.css">
-    </head>
-    <body>
-        <div id="app">
-            @auth
-                <navbar-component first-name="{{auth()->user()->Firstname}}"
-                    last-name="{{auth()->user()->Lastname}}" 
-                    csrf="{{ csrf_token() }}"></navbar-component>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>IHM</title>
+    
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div id="app">
+        @auth
+        <navbar-component first-name="{{auth()->user()->Firstname}}"
+            last-name="{{auth()->user()->Lastname}}" 
+            csrf="{{ csrf_token() }}"></navbar-component>
             @endauth
             @guest
-                <navbar-component></navbar-component>
+            <navbar-component></navbar-component>
             @endguest
-            <div style="background:linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url('https://freerangestock.com/sample/120965/overhead-view-of-a-laptop-and-a-stethoscope--medical-work.jpg');height:500px;width:100%; background-size:cover; " 
+            <div style="background:linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ),url('https://freerangestock.com/sample/120965/overhead-view-of-a-laptop-and-a-stethoscope--medical-work.jpg');height:500px;width:100%; background-size:cover; " 
             class="container-fluid pt-5">
-
-            <div class="container ">
-                <div class="mt-5">
-                    <h1 class="text-center text-white"> ASIC </h1>
-                    <p class="text-center text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi excepturi totam eveniet, blanditiis id velit quasi itaque deserunt vitae. Architecto non est harum laudantium minus ea alias provident nulla quisquam.</p>
-
-                </div>
-            </div>
-                <div class="filter-bar row mt-5">
-                    <div class="col-md-8 mt-4 offset-md-2">
-                        <form action="" method="get">
-                           <div class="input-group">
-                               <div class="input-group-prepend">
+            
+                    <h1 class="h1 text-center text-white text-shadow"> ASIC </h1>
+                    <h4 class="h4 text-center text-white">The Algerian Skin Imaging Collaboration</h4>
+                    
+            <div class="filter-bar row mt-5">
+                <div class="col-md-8 mt-4 offset-md-2">
+                    <form action="" method="get">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
                                 <!-- test -->
                                 
                                 
@@ -46,8 +42,8 @@
                                     <option value="nv">naevus mélanocytaires </option>
                                     <option value="vasc">lésions vasculaires</option>
                                 </select> 
-
-
+                                
+                                
                                 <select name="dx_type" id="dx_type" class="custom-select mx-2">
                                     <option selected style="color:#bfbfbf;font-style:italic;font-weight:bold">type de confirmation</option>
                                     <option value="histo">histopathologie</option>
@@ -62,14 +58,14 @@
                                     <option value="female">femme</option>
                                     <option value="unknown">inconnu</option>
                                 </select>
-
+                                
                                 <select name="age" id="age" class="custom-select mx-2">
                                     <option selected style="color:#bfbfbf;font-style:italic;font-weight:bold">age</option>
                                     @for($i=0;$i<=110;$i++) 
-                                      <option value="{{$i}}">{{ $i }}</option>
+                                    <option value="{{$i}}">{{ $i }}</option>
                                     @endfor
                                 </select>
-
+                                
                                 <select name="dx" id="dx" class="custom-select d-flex mx-2">
                                     <option selected style="color:#bfbfbf;font-style:italic;font-weight:bold">localisation</option>
                                     <option value="abdomen">abdomen</option>
@@ -87,36 +83,36 @@
                                     <option value="upper_extremity">extrémité supérieure</option>
                                     <option value="unknown">inconnu</option>
                                 </select>
-
-
-            
+                                
+                                
+                                
                                 <button type="submit" class="btn btn-primary mx-2">filtrer</button>
-                               </div>
-                           </div>
-                        </form>
-                    </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-
-            <!----------------- la partie main  ------------------------------->
-             <content-component></content-component>
-            
         </div>
-        {{-- On garde ce code pour les routes de Login --}}
-            {{-- @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif --}}
-
-        <script src="js/app.js"></script>
-    </body>
+        
+        <!----------------- la partie main  ------------------------------->
+        <content-component></content-component>
+        
+    </div>
+    {{-- On garde ce code pour les routes de Login --}}
+    {{-- @if (Route::has('login'))
+    <div class="top-right links">
+        @auth
+        <a href="{{ url('/home') }}">Home</a>
+        @else
+        <a href="{{ route('login') }}">Login</a>
+        
+        @if (Route::has('register'))
+        <a href="{{ route('register') }}">Register</a>
+        @endif
+        @endauth
+    </div>
+    @endif --}}
+    
+    <script src="js/app.js"></script>
+</body>
 </html>
