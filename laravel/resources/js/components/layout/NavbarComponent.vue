@@ -6,11 +6,11 @@
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
             <!-- <i class="fa fab fa-facebook"></i> -->
             <!-- <i class="fas fa-hospital text-white   "></i> -->
-            <i class="fas fa-caret-down text-white   "></i>
+            <i class="fas fa-caret-down text-dark"></i>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
-                <li class="nav-item mx-2" v-for="item in links" v-bind:key="item.name">
+                <li class="nav-item mx-md-2 mx-auto" v-for="item in links" v-bind:key="item.name">
                     <a v-if="!Array.isArray(item)" class="nav-link font-weight-bold text-dark hvr-underline-center-out hvr-grow" v-text="item.name" v-bind:href="item.href"> <span class="sr-only">(current)</span></a>
                 </li>
                 
@@ -48,6 +48,7 @@
 <script>
 import 'hover.css';
 export default {
+    name:'navbar',
     props:[
         'first-name',
         'last-name',
