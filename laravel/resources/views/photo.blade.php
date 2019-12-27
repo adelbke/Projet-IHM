@@ -75,16 +75,18 @@
                     <input type="number" value="age" name="age"> <br>
 
                     <div class="input-group mb-3">
+
                         <div class="input-group-prepend">
                           <button class="input-group-text" id="inputGroupFileAddon01">Envoyer</button>
                         </div>
+
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01"  @error('image') is-invalid @enderror" name="image" id="image"  value="{{ old('image') }}">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01"  @error('image') is-invalid @enderror" name="image[]" id="image"  value="{{ old('image') }}" multiple>
                         @error('image')
                             <div>{{ $message }}</div>
                         @enderror
 
-                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                        <label class="custom-file-label" for="inputGroupFile01">{{old('image')}}</label>
                           </div>
                         </div>
 

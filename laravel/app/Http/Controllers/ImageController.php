@@ -14,9 +14,9 @@ class ImageController extends Controller
     }
 
     public function store(ImagesRequest $request)
-    { $im = new Image();
+    {
       $le = new Lesion();
-        $im->path = $request->image->store(config('images.path'), 'local');
+
 
          $le->collection_id=1;
          $le->dx= $request->input('dx');
@@ -25,8 +25,11 @@ class ImageController extends Controller
          $le->sex = $request->input('sex');
          $le->age= $request->input('age');
          $le->save();
-         $im->lesion_id=$le->id;
-         $im->save();
+         foreach($request->image as $photo) {
+         $im = new Image();
+         $im->path = $photo->store(config('images.path'),'local');
+         $im->lesion_id= $le->id;
+         $im->save(); }
         return view('photo_accepter');
     }
 
