@@ -1947,25 +1947,25 @@ __webpack_require__.r(__webpack_exports__);
         placeholder: 'Catégorie de lésion',
         values: [],
         options: [{
-          name: 'Actinic keratoses and intraepithelial carcinoma',
+          name: 'Kératoses actiniques et carcinome intraépithélial',
           acronym: 'akiec'
         }, {
-          name: 'basal cell carcinoma',
+          name: 'carcinome basocellulaire',
           acronym: 'bcc'
         }, {
-          name: 'benign keratosis-like lesions',
+          name: 'lésions bénignes de type kératose',
           acronym: 'bkl'
         }, {
           name: 'dermatofibroma',
           acronym: 'df'
         }, {
-          name: 'melanoma',
+          name: 'mélanome',
           acronym: 'mel'
         }, {
-          name: 'melanocytic nevi',
+          name: 'naevus mélanocytaires',
           acronym: 'nv'
         }, {
-          name: 'vascular lesions',
+          name: 'lésions vasculaires',
           acronym: 'vasc'
         }]
       }, {
@@ -1976,13 +1976,13 @@ __webpack_require__.r(__webpack_exports__);
           name: 'histopathology',
           acronym: 'histo'
         }, {
-          name: 'follow-up',
-          acronym: 'histo'
+          name: 'visite de suivi',
+          acronym: 'follow-up'
         }, {
-          name: 'expert consensus',
+          name: "consensus d'experts",
           acronym: 'consensus'
         }, {
-          name: 'confocal microscopy',
+          name: 'microscopie confocale',
           acronym: 'confocal'
         }]
       }, {
@@ -1993,43 +1993,43 @@ __webpack_require__.r(__webpack_exports__);
           name: 'abdomen',
           acronym: 'abdomen'
         }, {
-          name: 'back',
+          name: 'dos',
           acronym: 'back'
         }, {
-          name: 'chest',
+          name: 'poitrine',
           acronym: 'chest'
         }, {
-          name: 'ear',
+          name: 'oreille',
           acronym: 'ear'
         }, {
-          name: 'face',
+          name: 'visage',
           acronym: 'face'
         }, {
-          name: 'foot',
+          name: 'pied',
           acronym: 'foot'
         }, {
-          name: 'genital',
+          name: 'génitale',
           acronym: 'genital'
         }, {
-          name: 'hand',
+          name: 'main',
           acronym: 'hand'
         }, {
-          name: 'lower extremity',
+          name: 'membre inférieur',
           acronym: 'lower extremity'
         }, {
-          name: 'neck',
+          name: 'cou',
           acronym: 'neck'
         }, {
-          name: 'scalp',
+          name: 'cuir chevelu',
           acronym: 'scalp'
         }, {
-          name: 'trunk',
+          name: 'torse',
           acronym: 'trunk'
         }, {
-          name: 'upper extremity',
+          name: 'membre supérieur',
           acronym: 'upper extremity'
         }, {
-          name: 'unknown',
+          name: 'inconnue',
           acronym: 'unknown'
         }]
       }, {
@@ -6756,7 +6756,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.multiselect__option[data-v-1c992a4a]{\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    white-space: nowrap;\n}\n.cursor-pointer[data-v-1c992a4a]{\r\n    cursor: pointer;\n}\r\n", ""]);
+exports.push([module.i, "\n.multiselect__option[data-v-1c992a4a]{\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n}\n.cursor-pointer[data-v-1c992a4a]{\n    cursor: pointer;\n}\n", ""]);
 
 // exports
 

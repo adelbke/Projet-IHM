@@ -4,10 +4,10 @@
         <div class="row">
             <div class="col-md col-12 px-2 py-2 cursor-pointer" v-for="item in this.data" v-bind:key="item.placeholder">
                 <span class="text-center" v-text="item.placeholder"></span>
-                <multiselect v-model="item.values" placeholder="Tous" 
-                    :searchable="false" 
-                    :close-on-select="false" 
-                    :show-labels="true" 
+                <multiselect v-model="item.values" placeholder="Tous"
+                    :searchable="false"
+                    :close-on-select="false"
+                    :show-labels="true"
                     :multiple="true"
                     track-by="name"
                     label="name"
@@ -59,7 +59,7 @@ export default {
             return result;
         }
     },
-    data:function () {  
+    data:function () {
         return {
             options:['one','two','three'],
             value:[],
@@ -71,15 +71,15 @@ export default {
                     values:[],
                     options:[
                         {
-                            name:'Actinic keratoses and intraepithelial carcinoma',
+                            name:'Kératoses actiniques et carcinome intraépithélial',
                             acronym:'akiec',
                         },
                         {
-                            name:'basal cell carcinoma',
+                            name:'carcinome basocellulaire',
                             acronym:'bcc',
                         },
                         {
-                            name:'benign keratosis-like lesions',
+                            name:'lésions bénignes de type kératose',
                             acronym:'bkl',
                         },
                         {
@@ -87,15 +87,15 @@ export default {
                             acronym:'df',
                         },
                         {
-                            name:'melanoma',
+                            name:'mélanome',
                             acronym:'mel',
                         },
                         {
-                            name:'melanocytic nevi',
+                            name:'naevus mélanocytaires',
                             acronym:'nv',
                         },
                         {
-                            name:'vascular lesions',
+                            name:'lésions vasculaires',
                             acronym:'vasc'
                         }
                     ]
@@ -111,18 +111,18 @@ export default {
                             acronym:'histo'
                         },
                         {
-                            name:'follow-up',
-                            acronym:'histo'
+                            name:'visite de suivi',
+                            acronym:'follow-up'
                         },
                         {
-                            name:'expert consensus',
+                            name:"consensus d'experts",
                             acronym:'consensus'
                         },
                         {
-                            name:'confocal microscopy',
+                            name:'microscopie confocale',
                             acronym:'confocal'
                         },
-                        
+
                     ]
                 },
                 {
@@ -135,58 +135,58 @@ export default {
                             acronym:'abdomen'
                         },
                         {
-                            name:'back',
+                            name:'dos',
                             acronym:'back'
                         },
                         {
-                            name:'chest',
+                            name:'poitrine',
                             acronym:'chest'
                         },
                         {
-                            name:'ear',
+                            name:'oreille',
                             acronym:'ear'
                         },
                         {
-                            name:'face',
+                            name:'visage',
                             acronym:'face'
                         },
                         {
-                            name:'foot',
+                            name:'pied',
                             acronym:'foot'
                         },
                         {
-                            name:'genital',
+                            name:'génitale',
                             acronym:'genital'
                         },
                         {
-                            name:'hand',
+                            name:'main',
                             acronym:'hand'
                         },
                         {
-                            name:'lower extremity',
+                            name:'membre inférieur',
                             acronym:'lower extremity'
                         },
                         {
-                            name:'neck',
+                            name:'cou',
                             acronym:'neck'
                         },
                         {
-                            name:'scalp',
+                            name:'cuir chevelu',
                             acronym:'scalp'
                         },
                         {
-                            name:'trunk',
+                            name:'torse',
                             acronym:'trunk'
                         },
                         {
-                            name:'upper extremity',
+                            name:'membre supérieur',
                             acronym:'upper extremity'
                         },
                         {
-                            name:'unknown',
+                            name:'inconnue',
                             acronym:'unknown'
                         },
-                        
+
                     ]
                 },
                 {
