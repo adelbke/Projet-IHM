@@ -2,8 +2,8 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title>Mon site</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>ASIC</title>
+        <link rel="stylesheet" href="css/app.css" crossorigin="anonymous">
 
     </head>
     <body>
@@ -72,7 +72,13 @@
                         <option value="Other">Inconnu</option>
                     </select>
                     </div>
-                    <input type="number" value="age" name="age"> <br>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend" for="example-number-input">
+                        <label for="example-number-input" class="input-group-text">Age</label>
+                        </div>
+                          <input class="form-control" type="number" min="0" value="age" id="example-number-input" >
+                        </div>
+
 
                     <div class="input-group mb-3">
 
