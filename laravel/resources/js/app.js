@@ -9,7 +9,7 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 // import 'popper.js';
-// import 'jquery';
+import 'jquery';
 import 'bootstrap';
 
 

@@ -15,7 +15,9 @@ class ImageController extends Controller
 
     public function store(ImagesRequest $request)
     {
-      $le = new Lesion();
+        // TODO: Validation
+
+        $le = new Lesion();
 
 
          $le->collection_id=1;

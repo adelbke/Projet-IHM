@@ -14,7 +14,7 @@
         "axios": "^0.19",
         "bootstrap": "^4.0.0",
         "cross-env": "^5.1",
-        "jquery": "^3.2",
+        "jquery": "^3.4.1",
         "laravel-mix": "^4.0.7",
         "lodash": "^4.17.13",
         "popper.js": "^1.12",
@@ -30,7 +30,6 @@
         "bootstrap-scss": "^4.4.1",
         "hover-text.css": "0.0.1",
         "hover.css": "^2.3.2",
-        "jquery": "^3.4.1",
         "popper.js": "^1.16.0",
         "vue-multiselect": "^2.1.6"
     }
