@@ -13,7 +13,7 @@
         <div class="container">
           <div class="row">
             <form class="col-md-12" action="{{ url('photo') }}" method="POST" enctype="multipart/form-data" >
-              @csrf 
+              @csrf
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <label class="input-group-text" for="inputGroupSelect01">Options</label>
@@ -78,10 +78,10 @@
           <div class="input-group-prepend" for="example-number-input">
           <label for="example-number-input" class="input-group-text">Age</label>
           </div>
-            <input class="form-control" type="number" min="0" value="age" id="example-number-input" >
+            <input class="form-control" type="number" min="0" name="age" id="example-number-input" >
           </div>
 
-      
+
 
         <div class="custom-file">
           <input type="file" class="custom-file-input" id="validatedCustomFile" @error('image') is-invalid @enderror name="image[]" id="image"  value="{{ old('image') }}" multiple>

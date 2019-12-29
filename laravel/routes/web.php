@@ -19,5 +19,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('photo', 'ImageController@create');
-Route::post('photo', 'ImageController@store');
+Route::middleware('auth')->get('photo', 'CollectionController@create');
+Route::middleware('auth')->post('photo', 'CollectionController@store');
