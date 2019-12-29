@@ -76,7 +76,7 @@
                         <div class="input-group-prepend" for="example-number-input">
                         <label for="example-number-input" class="input-group-text">Age</label>
                         </div>
-                          <input class="form-control" type="number" min="0" value="age" id="example-number-input" >
+                          <input class="form-control" type="number" min="0" name="age"  id="example-number-input" >
                         </div>
 
 

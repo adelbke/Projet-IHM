@@ -28,6 +28,7 @@ class ImageController extends Controller
          foreach($request->image as $photo) {
          $im = new Image();
          $im->path = $photo->store(config('images.path'),'local');
+         $im->path = '/storage/'.$im->path;
          $im->lesion_id= $le->id;
          $im->save(); }
         return view('photo_accepter');
