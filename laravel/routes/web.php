@@ -36,5 +36,5 @@ Route::middleware('auth')->post('photo', 'CollectionController@store');
 Route::middleware('auth','superadmin')->resource('list','UserController')->only('index','destroy','update');
 
 
-Route::resource('list','UserController')->only('index','destroy');
+
 

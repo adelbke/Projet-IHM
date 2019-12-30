@@ -23,7 +23,7 @@
                 <td>{{$user->email}}</td>
                 <td>
                 <div class="row">
-                @if ($user->confirmed==false)
+                @if ($user->confirmed=="Pending")
                   <form  method="POST" action="{{ url('/list',['id' => $user->id]) }}">
                     @csrf
                     @method('PUT')
