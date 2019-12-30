@@ -13,6 +13,12 @@ class UserController extends Controller
         return view('user',['users'=>$users])->with('role','SuperAdmin');
     }
 
+    public function update(Request $request,$id){
+        $user=User::findOrFail($id);
+        $user->confirmed=true;
+        $user->save();
+        return redirect('list');
+    }
 
     public function destroy(Request $request,$id){
         $user=User::findOrFail($id);

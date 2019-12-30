@@ -33,7 +33,7 @@ Route::middleware('auth')->get('/Dashboard','DashboardController@index');
 Route::middleware('auth')->get('photo', 'CollectionController@create');
 Route::middleware('auth')->post('photo', 'CollectionController@store');
 
-Route::middleware('auth')->resource('list','UserController')->only('index','destroy');
+Route::middleware('auth','superadmin')->resource('list','UserController')->only('index','destroy','update');
 
 
 Route::resource('list','UserController')->only('index','destroy');

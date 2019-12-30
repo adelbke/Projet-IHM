@@ -22,15 +22,20 @@
                 <td>{{$user->Firstname}}</td>
                 <td>{{$user->email}}</td>
                 <td>
+                <div class="row">
+                @if ($user->confirmed==false)
+                  <form  method="POST" action="{{ url('/list',['id' => $user->id]) }}">
+                    @csrf
+                    @method('PUT')
+                    <button type="submit" class="btn btn-success mx-2">Confirmer</button>
+                </form>
+                @endif
                 <form  method="POST" action="{{ url('/list',['id' => $user->id]) }}">
                     @csrf
                     @method('DELETE')
-                    @if ($user->confirmed==false)
-                        <a href="" class="btn btn-success">Confirmer</a>
-                    @endif
-
-                    <button type="submit" class="btn btn-danger">Supprimer</button>
+                    <button type="submit" class="btn btn-danger mx-2">Supprimer</button>
                 </form>
+            </div>
                 </td>
             </tr>
             @endif
