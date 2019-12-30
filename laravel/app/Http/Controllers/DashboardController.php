@@ -19,7 +19,7 @@ class DashboardController extends Controller
             // Request Global data
             $imageCount = DB::table('images')->count(); // Number of all images
             $collectionCount = DB::table('collections')->count(); // Number of all collections
-            $userCount = DB::table('users')->where([['confirmed','=','Yes'],['role','=','Admin']])->count(); // number of contributors (Admins)
+            $userCount = DB::table('users')->where([['confirmed','=',true],['role','=','Admin']])->count(); // number of contributors (Admins)
 
             // Get gender chart data
             $genderData = $this->genderData()->toJson();
