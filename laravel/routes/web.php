@@ -36,3 +36,5 @@ Route::middleware('auth')->post('photo', 'CollectionController@store');
 Route::middleware('auth')->resource('list','UserController')->only('index','destroy');
 
 
+Route::resource('list','UserController')->only('index','destroy');
+

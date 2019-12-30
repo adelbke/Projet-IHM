@@ -154,7 +154,7 @@
         <!-- Nav Item - User Information -->
         <li class="nav-item dropdown no-arrow">
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-800 small">{{auth()->user()->Lastname.' '.auth()->user()->Firstname}}</span>
+                <span class="mr-2 d-none d-lg-inline font-weight-bold text-gray-800 small">{{auth()->user()->Lastname.' '.auth()->user()->Firstname}}</span>
                 <i class="fa fas fa-user rounded-circle fa-lg text-dark"></i>
                 {{-- <i class="fas fa-user   "></i> --}}
                 {{-- <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60"> --}}

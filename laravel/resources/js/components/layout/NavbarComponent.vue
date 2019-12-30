@@ -32,9 +32,9 @@
                                 Dropdown
                             </button>
                     <div class="dropdown-menu" aria-labelledby="triggerId">
-                        <form class="dropdown-item" action="/logout" method="post">
+                        <form class="" action="/logout" method="post">
                             <input type="hidden" name="_token" v-bind:value="csrf">
-                            <button type="submit" class="btn btn-link">logout</button>
+                            <button type="submit" class="dropdown-item">logout</button>
                         </form>
                         
                     </div>
