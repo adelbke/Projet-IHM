@@ -1,5 +1,7 @@
 <?php
 
+use App\Collection;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,9 +28,6 @@ Route::post('photo', 'ImageController@store');
 
 
 // Route Dashboard
-Route::middleware('auth')->get('/Dashboard',function ()
-{
-    return view('Dashboard');
-});
+Route::middleware('auth')->get('/Dashboard','DashboardController@index');
 Route::middleware('auth')->get('photo', 'CollectionController@create');
 Route::middleware('auth')->post('photo', 'CollectionController@store');

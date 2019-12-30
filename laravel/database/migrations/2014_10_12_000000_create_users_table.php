@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->enum('role',['SuperAdmin','Admin'])->default('Admin');
-            $table->boolean('confirmed')->default(0);
+            $table->enum('confirmed',['Yes','Rejected','Pending'])->default('Pending');
             $table->rememberToken();
             $table->timestamps();
         });
