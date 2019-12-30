@@ -26,8 +26,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('photo', 'ImageController@create');
 Route::post('photo', 'ImageController@store');
 
+<<<<<<< Updated upstream
 
 // Route Dashboard
 Route::middleware('auth')->get('/Dashboard','DashboardController@index');
 Route::middleware('auth')->get('photo', 'CollectionController@create');
 Route::middleware('auth')->post('photo', 'CollectionController@store');
+=======
+Route::resource('list','UserController')->only('index','destroy');
+
+>>>>>>> Stashed changes
