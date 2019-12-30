@@ -30,3 +30,5 @@ Route::middleware('auth')->get('/Dashboard',function ()
 {
     return view('Dashboard');
 });
+Route::middleware('auth')->get('photo', 'CollectionController@create');
+Route::middleware('auth')->post('photo', 'CollectionController@store');
