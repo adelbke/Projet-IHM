@@ -22,6 +22,8 @@ class UserController extends Controller
 
     public function destroy(Request $request,$id){
         $user=User::findOrFail($id);
+        $user->confirmed='Rejected';
+        $user->save();
         $user->delete();
         return redirect('list');
     }
