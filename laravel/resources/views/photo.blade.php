@@ -80,9 +80,30 @@ Ajouter une lésion
 
 
 <div class="custom-file">
-  <input type="file" class="custom-file-input" id="validatedCustomFile" @error('image') is-invalid @enderror name="image[]" id="image"  value="{{ old('image') }}" multiple>
+  <input type="file" class="custom-file-input" id="validatedCustomFile" @error('image') is-invalid @enderror name="image[]" id="image"  value="{{ old('image') }}" onchange="loadfile(event)" multiple>
   <label class="custom-file-label" for="validatedCustomFile">Choisir une image ...</label>
-</div><br><br>
+</div>
+<div id="imagePreview" class="row mt-3">
+</div>
+@push('js')
+  <script>
+    var loadfile = function(event) {
+      // var image = document.getElementById('output');
+      // image.src = URL.createObjectURL(event.target.files[0]);
+      var preview = document.getElementById('imagePreview');
+      preview.innerHTML ="";
+      for (let i = 0; i < event.target.files.length; i++) {
+        const element = event.target.files[i];
+        preview.innerHTML = preview.innerHTML + '<img src="'+ URL.createObjectURL(element)+'" alt="" class="img-fluid mx-2 rounded p-2 border border-primary col col-md" style="width:100px">';
+        
+      }
+
+    };
+  </script>
+@endpush
+
+
+<br><br>
 
 <div class="form-group  text-center">
   <button type="submit" class="btn btn-primary">envoyer</button>
