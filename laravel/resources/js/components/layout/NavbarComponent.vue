@@ -36,6 +36,11 @@
                             <input type="hidden" name="_token" v-bind:value="csrf">
                             <button type="submit" class="dropdown-item">logout</button>
                         </form>
+
+                        <a href="/Dashboard" class="dropdown-item">
+                            <i class="fas fa-tachometer-alt fa-sm"></i>
+                            Dashboard
+                        </a>
                         
                     </div>
                 </div>

@@ -1,11 +1,14 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 
 @section('content')
+@push('title')
+		Liste des Utilisateurs
+@endpush
 
 <div class="container">
     <div class="row">
-        <h1 class="text-center">la liste des utilisateurs</h1>
+        {{-- <h1 class="text-center">la liste des utilisateurs</h1> --}}
 
         <table class="table">
             <tr>

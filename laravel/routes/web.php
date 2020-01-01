@@ -23,8 +23,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('photo', 'ImageController@create');
-Route::post('photo', 'ImageController@store');
 
 
 

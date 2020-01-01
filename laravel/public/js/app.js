@@ -2096,12 +2096,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -2140,6 +2134,15 @@ __webpack_require__.r(__webpack_exports__);
         cutoutPercentage: 80
       }
     });
+  },
+  methods: {
+    sum: function sum(array) {
+      var result = 0;
+      array.forEach(function (element) {
+        result = result + element;
+      });
+      return result;
+    }
   }
 });
 
@@ -2217,6 +2220,11 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var hover_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! hover.css */ "./node_modules/hover.css/css/hover.css");
 /* harmony import */ var hover_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(hover_css__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
 //
 //
 //
@@ -23028,7 +23036,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n************  main  ****************\r\n\r\n.main-acc[data-v-fbd30662] {\r\n  display: -webkit-box;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n          align-items: center;\r\n  position: relative;\r\n  top: -2.25em;\r\n  width: 100%;\r\n  margin: 0 auto;\r\n  max-width: 75em;\r\n  max-height: 78px;\r\n  min-height: 78px;\r\n  padding: 1.5em 0;\r\n  overflow: hidden;\r\n  z-index: 2;\r\n  border-top-right-radius: 3px;\r\n  border-top-left-radius: 3px;\r\n  border-bottom: 1px solid #eaeaea;\r\n  background-color: white;\n}\n************  icon ****************\r\n\r\n\r\n************  main contenu ****************\r\n.main[data-v-fbd30662]{\r\n  position: relative;\r\n  top:-2.25em;\r\n  margin-top: -2.25em;\r\n  margin-bottom: 2.25em;\r\n  padding: 2.25em 0 3em;\r\n  border-radius: 3px;\r\n  background-color: white;\r\n  width: 100%;\r\n  max-width: 75em;\r\n  margin: 0 auto;\n}\n.co[data-v-fbd30662]{\r\n    background: var(--light);\n}\n.main-acc-tit[data-v-fbd30662]{\r\n    display: inline;\n}\r\n", ""]);
+exports.push([module.i, "\n************  main  ****************\n\n.main-acc[data-v-fbd30662] {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-align: center;\n          align-items: center;\n  position: relative;\n  top: -2.25em;\n  width: 100%;\n  margin: 0 auto;\n  max-width: 75em;\n  max-height: 78px;\n  min-height: 78px;\n  padding: 1.5em 0;\n  overflow: hidden;\n  z-index: 2;\n  border-top-right-radius: 3px;\n  border-top-left-radius: 3px;\n  border-bottom: 1px solid #eaeaea;\n  background-color: white;\n}\n************  icon ****************\n\n\n************  main contenu ****************\n.main[data-v-fbd30662]{\n  position: relative;\n  top:-2.25em;\n  margin-top: -2.25em;\n  margin-bottom: 2.25em;\n  padding: 2.25em 0 3em;\n  border-radius: 3px;\n  background-color: white;\n  width: 100%;\n  max-width: 75em;\n  margin: 0 auto;\n}\n.co[data-v-fbd30662]{\n    background: var(--light);\n}\n.main-acc-tit[data-v-fbd30662]{\n    display: inline;\n}\n", ""]);
 
 // exports
 
@@ -72418,15 +72426,22 @@ var render = function() {
             domProps: { textContent: _vm._s(this.title) }
           },
           [_vm._v("lesions par sexe")]
-        ),
-        _vm._v(" "),
-        _vm._m(0)
+        )
       ]
     ),
     _vm._v(" "),
     _c("div", { staticClass: "card-body" }, [
       _c("div", { staticClass: "chart-pie pt-4 pb-2" }, [
-        _c("canvas", { ref: "myPieChart" })
+        _vm.sum(_vm.genderdata) != 0
+          ? _c("canvas", { ref: "myPieChart" })
+          : _c("div", { staticClass: "container text-center" }, [
+              _c("img", {
+                staticClass: "img-fluid w-50",
+                attrs: { src: "/images/undraw_blank_canvas.svg", alt: "vide" }
+              }),
+              _vm._v(" "),
+              _vm._m(0)
+            ])
       ]),
       _vm._v(" "),
       _vm._m(1)
@@ -72438,54 +72453,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "dropdown no-arrow" }, [
-      _c(
-        "a",
-        {
-          staticClass: "dropdown-toggle",
-          attrs: {
-            href: "#",
-            role: "button",
-            id: "dropdownMenuLink",
-            "data-toggle": "dropdown",
-            "aria-haspopup": "true",
-            "aria-expanded": "false"
-          }
-        },
-        [
-          _c("i", {
-            staticClass: "fas fa-ellipsis-v fa-sm fa-fw text-gray-400"
-          })
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass:
-            "dropdown-menu dropdown-menu-right shadow animated--fade-in",
-          attrs: { "aria-labelledby": "dropdownMenuLink" }
-        },
-        [
-          _c("div", { staticClass: "dropdown-header" }, [
-            _vm._v("Dropdown Header:")
-          ]),
-          _vm._v(" "),
-          _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
-            _vm._v("Action")
-          ]),
-          _vm._v(" "),
-          _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
-            _vm._v("Another action")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "dropdown-divider" }),
-          _vm._v(" "),
-          _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
-            _vm._v("Something else here")
-          ])
-        ]
-      )
+    return _c("h4", { staticClass: "h5" }, [
+      _vm._v("Vos informations sont vides, "),
+      _c("a", { attrs: { href: "\\photo" } }, [_vm._v("Ajoutez")]),
+      _vm._v(" des images pour les remplir")
     ])
   },
   function() {
@@ -72643,7 +72614,7 @@ var render = function() {
   return _c("div", [
     _c("nav", { staticClass: "navbar sticky-top navbar-expand-lg bg-white" }, [
       _c("a", { staticClass: "navbar-brand mr-5", attrs: { href: "/" } }, [
-        _vm._v("Logo\r\n        ")
+        _vm._v("Logo\n        ")
       ]),
       _vm._v(" "),
       _vm._m(0),
@@ -72712,7 +72683,7 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\r\n                                Dropdown\r\n                            "
+                        "\n                                Dropdown\n                            "
                       )
                     ]
                   ),
@@ -72742,7 +72713,9 @@ var render = function() {
                             [_vm._v("logout")]
                           )
                         ]
-                      )
+                      ),
+                      _vm._v(" "),
+                      _vm._m(3)
                     ]
                   )
                 ])
@@ -72806,6 +72779,21 @@ var staticRenderFns = [
         [_vm._v("Se Connecter")]
       )
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      { staticClass: "dropdown-item", attrs: { href: "/Dashboard" } },
+      [
+        _c("i", { staticClass: "fas fa-tachometer-alt fa-sm" }),
+        _vm._v(
+          "\n                            Dashboard\n                        "
+        )
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -85461,8 +85449,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\wamp64\www\projet-n1-ihm\laravel\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\wamp64\www\projet-n1-ihm\laravel\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/adel/laravelTutorial/projet-n1-ihm/laravel/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/adel/laravelTutorial/projet-n1-ihm/laravel/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

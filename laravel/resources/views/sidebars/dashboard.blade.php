@@ -8,23 +8,37 @@
                 
                 <!-- Divider -->
                 <hr class="sidebar-divider my-0">
+
+                    @if (Request::path() ==='Dashboard')
+                        <!-- Nav Item - Dashboard -->
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/Dashboard">
+                                <i class="fas fa-fw fa-tachometer-alt"></i>
+                                <span>Dashboard </span>
+                            </a>
+                        </li>
+                    @else
+                        <!-- Nav Item - Dashboard -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Dashboard">
+                                <i class="fas fa-fw fa-tachometer-alt"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        
+                    @endif
                 
-                <!-- Nav Item - Dashboard -->
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">
-                        <i class="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard</span></a>
-                    </li>
+                    
                     
                     <!-- Divider -->
                     <hr class="sidebar-divider">
                     
                     <!-- Heading -->
-                    <div class="sidebar-heading">
-                        Interface
-                    </div>
+                    {{-- <div class="sidebar-heading">
+                        Utilisateurs
+                    </div> --}}
                     
-                    <!-- Nav Item - Pages Collapse Menu -->
+                    {{-- <!-- Nav Item - Pages Collapse Menu -->
                     <li class="nav-item">
                         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                             <i class="fas fa-fw fa-cog"></i>
@@ -37,7 +51,26 @@
                                 <a class="collapse-item" href="cards.html">Cards</a>
                             </div>
                         </div>
-                    </li>
+                    </li> --}}
+                    @if (auth()->user()->role === 'SuperAdmin')
+                        @if (Request::path() === 'list')
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/list">
+                                    <i class="fas fa-user-circle fa-sm "></i>
+                                    <span>Liste d'utilisateurs</span>
+                                </a>
+                            </li>
+                            
+                        @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="/list">
+                                    <i class="fas fa-user-circle fa-sm "></i>
+                                    <span>Liste d'utilisateurs</span>
+                                </a>
+                            </li>                        
+                        @endif
+                    @endif
+                        
                     
                     <!-- Nav Item - Utilities Collapse Menu -->
                     <li class="nav-item">

@@ -3,23 +3,17 @@
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
             <h6 class="m-0 font-weight-bold text-primary" v-text="this.title" >lesions par sexe</h6>
-            <div class="dropdown no-arrow">
-                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                    <div class="dropdown-header">Dropdown Header:</div>
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </div>
+            
         </div>
         <!-- Card Body -->
         <div class="card-body">
             <div class="chart-pie pt-4 pb-2">
-                <canvas ref="myPieChart"></canvas>
+                <canvas ref="myPieChart" v-if="sum(genderdata) != 0">
+                </canvas>
+                <div class="container text-center" v-else >
+                    <img src="/images/undraw_blank_canvas.svg" class="img-fluid w-50" alt="vide">
+                    <h4 class="h5">Vos informations sont vides, <a href="\photo">Ajoutez</a> des images pour les remplir</h4>
+                </div>
             </div>
             <div class="mt-4 text-center small">
                 <span class="mr-2">
@@ -78,7 +72,15 @@ export default {
 	   });
     },
 
-    
+    methods:{
+        sum:function (array) {
+            var result = 0;
+            array.forEach(element => {
+                result = result + element;
+            });
+            return result;
+        }
+    },
 }
 </script>
 
