@@ -11,6 +11,11 @@ use App\User;
 
 class CollectionController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['auth'=>'verified']);
+    }
+
     public function create()
     {
         return view('photo');

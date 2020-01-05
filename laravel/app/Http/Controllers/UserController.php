@@ -8,6 +8,11 @@ use App\User;
 
 class UserController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(['auth'=>'verified']);
+    }
     public function index(){
         $users=User::all();
         return view('user',['users'=>$users])->with('role','SuperAdmin');

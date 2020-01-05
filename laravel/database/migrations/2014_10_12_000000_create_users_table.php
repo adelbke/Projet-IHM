@@ -18,12 +18,12 @@ class CreateUsersTable extends Migration
             $table->string('Firstname');
             $table->string('Lastname');
             $table->string('email');
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->enum('role',['SuperAdmin','Admin'])->default('Admin');
             $table->enum('confirmed',['Yes','Rejected','Pending'])->default('Pending');
             $table->rememberToken();
             $table->timestamps();
+            $table->timestamp('email_verified_at')->nullable();
             $table->softDeletes();
         });
     }
