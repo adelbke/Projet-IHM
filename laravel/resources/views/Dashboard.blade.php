@@ -108,7 +108,7 @@
 				<div class="card-body">
 					<div class="row no-gutters align-items-center">
 						<div class="col mr-2">
-                            <span class="badge badge-danger" style="float:right"> {{$userPendingCount}} </span>
+                          @if($userPendingCount>0)  <span class="badge badge-danger" style="float:right"> {{$userPendingCount}} </span> @endif
 						<div class="text-xs font-weight-bold text-info text-uppercase mb-1"><a href="{{ url('list') }}">Nombre de Contributeurs</a></div>
 							<div class="h5 mb-0 font-weight-bold text-gray-800">
 								{{$userCount}}
