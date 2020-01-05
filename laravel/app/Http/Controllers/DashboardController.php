@@ -20,13 +20,14 @@ class DashboardController extends Controller
             $imageCount = DB::table('images')->count(); // Number of all images
             $collectionCount = DB::table('collections')->count(); // Number of all collections
             $userCount = DB::table('users')->where([['confirmed','=','Yes'],['role','=','Admin']])->count(); // number of contributors (Admins)
+            $userPendingCount = DB::table('users')->where([['confirmed','=','Pending'],['role','=','Admin']])->count(); // number of pending users (Admins)
 
             // Get gender chart data
             $genderData = $this->genderData()->toJson();
             $usergenderData = $this->genderData(true)->toJson();
 
-            return view('Dashboard',compact('imageCount','collectionCount','userCount','genderData','usergenderData'));
-    
+            return view('Dashboard',compact('imageCount','collectionCount','userCount','genderData','usergenderData','userPendingCount'));
+
         }else{
             // Number of images that belong to the admin
             $imageCount = DB::table('images')
@@ -39,7 +40,7 @@ class DashboardController extends Controller
 
             return view('Dashboard',compact('imageCount','collectionCount','usergenderData'));
         }
-        
+
     }
 
     private function genderData($byUser = false)
@@ -59,11 +60,11 @@ class DashboardController extends Controller
                 ->join('collections','lesions.collection_id','=','collections.id')
                 ->where('lesions.sex','=','other')
                 ->where('collections.user_id','=',auth()->user()->id)->count();
-            
+
         }else{
             $femaleLesionsCount = DB::table('lesions')->where('sex','=','female')->count();
             $maleLesionsCount = DB::table('lesions')->where('sex','=','male')->count();
-            $otherLesionsCount = DB::table('lesions')->where('sex','=','other')->count();    
+            $otherLesionsCount = DB::table('lesions')->where('sex','=','other')->count();
         }
 
         return collect([$maleLesionsCount,$femaleLesionsCount,$otherLesionsCount]);
