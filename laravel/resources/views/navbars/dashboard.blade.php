@@ -18,9 +18,11 @@
         </div>
     </form> --}}
 
-    <h2 class="text-dark">
-        @stack('title')
-    </h2>
+    <ul class="navbar-nav mr-auto">
+        <h2 class="text-dark">
+            @stack('title')
+        </h2>
+    </ul>
     <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-auto">
         

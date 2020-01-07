@@ -11,7 +11,6 @@
 	<!-- Page Heading -->
 	<div class="d-sm-flex align-items-center justify-content-between mb-4">
 		<h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-		<a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
 	</div>
 
 	<!-- Content Row -->
@@ -30,7 +29,7 @@
 									Mes Images Hébergées
 								@endif
 								</div>
-						<div class="h5 mb-0 font-weight-bold text-gray-800">{{$imageCount}}</div>
+						<div class="h5 mb-0 font-weight-bold text-gray-800">{{$imageCount}} image{{$imageCount>1? "s":""}} </div>
 						</div>
 						<div class="col-auto">
 							<i class="fas fa-images fa-2x"></i>
@@ -54,7 +53,7 @@
 								@endif
 
 							</div>
-							<div class="h5 mb-0 font-weight-bold text-gray-800">{{$collectionCount}}</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800">{{$collectionCount}} base{{$collectionCount>1 ?"s":""}} </div>
 						</div>
 						<div class="col-auto">
 							<i class="fas fa-layer-group fa-2x"></i>
@@ -76,13 +75,11 @@
 							<div class="row no-gutters align-items-center">
 								<div class="col-auto">
 									<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
-
-											@if ($collectionCount != 0)
-											{{$imageCount / $collectionCount}}
+											@if ($lesionCount != 0)
+											{{floor($imageCount / $lesionCount *100)/100}}%
 											@else
-													0
+												0%
 											@endif
-
 									</div>
 								</div>
 								<div class="col mr-2">
@@ -130,19 +127,20 @@
 
 		@if (auth()->user()->role == "SuperAdmin")
 			<!-- Global Pie Chart -->
-			<div class="col-xl-5 col-lg-7">
+			<div class="col-xl-6 col-lg-6">
 				<genderpiechart-component title="Toutes les Lesions par sexe" :genderData="{{$genderData}}"></genderpiechart-component>
 			</div>
 		@endif
 
 		<!-- Pie Chart -->
-		<div class="col-xl-7 col-lg-5">
+		<div class="col-xl-6 col-lg-6">
 			<genderpiechart-component title="Toutes mes lésions par sexe" :genderData="{{$usergenderData}}"></genderpiechart-component>
 		</div>
 	</div>
+	
 
 	<!-- Content Row -->
-	<div class="row">
+	{{-- <div class="row">
 
 		<!-- Content Column -->
 		<div class="col-lg-6 mb-4">
@@ -258,7 +256,7 @@
 			</div>
 
 		</div>
-	</div>
+	</div> --}}
 </div>
 <!-- /.container-fluid -->
 

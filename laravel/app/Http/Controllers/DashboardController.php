@@ -23,14 +23,14 @@ class DashboardController extends Controller
             // Request Global data
             $imageCount = DB::table('images')->count(); // Number of all images
             $collectionCount = DB::table('collections')->count(); // Number of all collections
+            $lesionCount = DB::table('lesions')->count();
             $userCount = DB::table('users')->where([['confirmed','=','Yes'],['role','=','Admin']])->count(); // number of contributors (Admins)
             $userPendingCount = DB::table('users')->where([['confirmed','=','Pending'],['role','=','Admin']])->count(); // number of pending users (Admins)
 
             // Get gender chart data
             $genderData = $this->genderData()->toJson();
             $usergenderData = $this->genderData(true)->toJson();
-
-            return view('Dashboard',compact('imageCount','collectionCount','userCount','genderData','usergenderData','userPendingCount'));
+            return view('Dashboard',compact('imageCount','collectionCount','userCount','genderData','usergenderData','userPendingCount','lesionCount'));
 
         }else{
             // Number of images that belong to the admin
@@ -39,10 +39,13 @@ class DashboardController extends Controller
                 ->join('collections','lesions.collection_id','=','collections.id')->where('collections.user_id','=',auth()->user()->id)->get()->count();
             // Number of collections that belong to the Admin
             $collectionCount = DB::table('collections')->where('user_id','=',auth()->user()->id)->count();
+            $lesionCount = DB::table('lesions')
+                ->join('collections','lesions.collection_id','=','collections.id')
+                ->where('collections.user_id','=',auth()->user()->id)->count();
 
             $usergenderData = $this->genderData(true)->toJson();
 
-            return view('Dashboard',compact('imageCount','collectionCount','usergenderData'));
+            return view('Dashboard',compact('imageCount','collectionCount','usergenderData','lesionCount'));
         }
 
     }
