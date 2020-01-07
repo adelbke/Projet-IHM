@@ -10,5 +10,15 @@ class LesionController extends Controller
     {
         $this->middleware(['auth'=>'verified']);
     }
+
+    public function index()
+    {
+        if(auth()->user()->role == "Admin"){
+            return view('lesions.index');
+        }
+        if(auth()->user()->role == "SuperAdmin"){
+            return view('lesions.superadmin.index');
+        }
+    }
     //
 }

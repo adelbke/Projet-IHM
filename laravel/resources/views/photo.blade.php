@@ -116,12 +116,29 @@ Ajouter une lésion
 			<div class="col-md-12 col-12 mx-auto offset-lg-3 col-lg-6">
 				<div class="form-group mx-auto">
 					<label for="collection">Collection</label>
-					<select class="custom-select font-weight-bold" name="collection" id="collection">
+					<select class="custom-select font-weight-bold" onchange="loadCollectionName(event)" name="collection" id="collection">
 						<option selected value="create">Créer une Nouvelle collection</option>
 						@foreach ($collectionList as $item)
 							<option value="{{$item->id}}">{{$item->name}}; Avec {{$item->lesions_count}} Lesions </option>
 						@endforeach
 					</select>
+					@push('js')
+						<script>
+							var loadCollectionName = function (event) {
+								var container = document.getElementById('collectionNameContainer');
+								if(event.target.value == "create"){
+									container.innerHTML='<label for="collectionName">Entrez le nom de la collection à Ajouter</label>';
+									container.innerHTML += '<input type="text" class="form-control" name="collectionName" id="collectionName" aria-describedby="helpId" placeholder="Le nom de la collection à Ajouter">';
+								}else{
+									container.innerHTML= '';
+								}
+							};
+						</script>
+					@endpush
+				</div>
+				<div id="collectionNameContainer" class="form-group mx-auto">
+					  <label for="collectionName">Entrez le nom de la collection à Ajouter</label>
+					  <input type="text" class="form-control" name="collectionName" id="collectionName" aria-describedby="helpId" placeholder="Le nom de la collection à Ajouter">
 				</div>
 			</div>
 		</div>

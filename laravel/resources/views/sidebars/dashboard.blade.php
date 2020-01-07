@@ -75,8 +75,7 @@
                             <div class="bg-white py-2 collapse-inner rounded">
                                 <h6 class="collapse-header">Gestion des Images</h6>
                                 <a class="collapse-item font-weight-bold {{Request::path() == "photo"? "text-primary":""}}" href="/photo">Ajouter</a>
-                                <a class="collapse-item font-weight-bold" href="utilities-border.html">Suprimer</a>
-                                <a class="collapse-item font-weight-bold" href="utilities-border.html">Modifier</a>
+                                <a class="collapse-item font-weight-bold" href="/lesions">Liste</a>
                             </div>
                         </div>
                     </li>

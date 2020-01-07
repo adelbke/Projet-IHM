@@ -3,10 +3,8 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Illuminate\Http\RedirectResponse;
 
-
-class isSuperAdmin
+class Admin
 {
     /**
      * Handle an incoming request.
@@ -17,12 +15,10 @@ class isSuperAdmin
      */
     public function handle($request, Closure $next)
     {
-        
-        if (auth()->user()->role == "SuperAdmin")
-        {
+        if(auth()->user()->role =="Admin" && auth()->user()->confirmed == "Yes"){
             return $next($request);
+        }else{
+            return redirect()->back();
         }
-        return new RedirectResponse(url('/'));
-        
     }
 }

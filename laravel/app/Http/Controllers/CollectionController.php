@@ -33,6 +33,7 @@ class CollectionController extends Controller
             'sex'=>['required','string','in:male,female,other'],
             'age'=>['required','integer','gt:0'],
             'collection'=>['required'],
+            'collectionName'=>[Rule::requiredIf($request->input('collection')=='create'),'string'],
             'image'=>['required','array'],
             'image.*'=>['image','required']
 		]);
