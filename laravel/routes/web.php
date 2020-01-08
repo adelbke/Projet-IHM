@@ -34,6 +34,7 @@ Route::middleware('auth')->get('/lesions','LesionController@index');
 
 Route::middleware('auth','superadmin')->resource('list','UserController')->only('index','destroy','update');
 
+Route::middleware('auth')->get('/profile','UserController@show');
 
 
 

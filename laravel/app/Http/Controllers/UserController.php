@@ -32,4 +32,8 @@ class UserController extends Controller
         $user->delete();
         return redirect('list');
     }
+    public function show (){
+
+        return view('profile');
+    }
 }
