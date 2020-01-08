@@ -70,7 +70,7 @@ Ajouter une lésion
 						<label class="custom-control-label" for="female">Femme</label>
 					  </div>
 					  <div class="custom-control custom-radio custom-control-inline">
-						<input type="radio" class="custom-control-input" id="other" name="sex" value="other">
+						<input type="radio" class="custom-control-input" id="other" name="sex" value="unknown">
 						<label class="custom-control-label" for="other">Autre</label>
 					  </div>
 				</div>
@@ -103,13 +103,13 @@ Ajouter une lésion
 						for (let i = 0; i < event.target.files.length; i++) {
 						  const element = event.target.files[i];
 						  preview.innerHTML = preview.innerHTML + '<img src="'+ URL.createObjectURL(element)+'" alt="" class="img-fluid mx-2 rounded p-2 border border-primary my-2 col-3 col-md-3" style="width:100px">';
-						  
+
 						}
-				  
+
 					  };
 					</script>
 				  @endpush
-				  
+
 			</div>
 		</div>
 		<div class="row mb-4">
@@ -241,7 +241,7 @@ Ajouter une lésion
       for (let i = 0; i < event.target.files.length; i++) {
         const element = event.target.files[i];
         preview.innerHTML = preview.innerHTML + '<img src="'+ URL.createObjectURL(element)+'" alt="" class="img-fluid my-1 mx-2 rounded p-2 border border-primary col-4 col-md-4" style="width:100px">';
-        
+
       }
 
     };

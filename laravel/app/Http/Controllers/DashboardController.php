@@ -65,13 +65,13 @@ class DashboardController extends Controller
 
             $otherLesionsCount = DB::table('lesions')
                 ->join('collections','lesions.collection_id','=','collections.id')
-                ->where('lesions.sex','=','other')
+                ->where('lesions.sex','=','unknown')
                 ->where('collections.user_id','=',auth()->user()->id)->count();
 
         }else{
             $femaleLesionsCount = DB::table('lesions')->where('sex','=','female')->count();
             $maleLesionsCount = DB::table('lesions')->where('sex','=','male')->count();
-            $otherLesionsCount = DB::table('lesions')->where('sex','=','other')->count();
+            $otherLesionsCount = DB::table('lesions')->where('sex','=','unknown')->count();
         }
 
         return collect([$maleLesionsCount,$femaleLesionsCount,$otherLesionsCount]);

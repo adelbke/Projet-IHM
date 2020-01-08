@@ -30,20 +30,20 @@ class CollectionController extends Controller
             'dx'=>['required','string',Rule::in(['akiec','bcc','bkl','df','mel','nv','vasc'])],
             'dx_type'=>['required','string',Rule::in(['histo','follow-up','consensus','confocal'])],
             'localization'=>['required','string',Rule::in(['abdomen','back','chest','ear','face','foot','genital','hand','lower extremity','neck','scalp','trunk','upper extremity','unknown'])],
-            'sex'=>['required','string','in:male,female,other'],
+            'sex'=>['required','string','in:male,female,unknown'],
             'age'=>['required','integer','gt:0'],
             'collection'=>['required'],
             'collectionName'=>[Rule::requiredIf($request->input('collection')=='create'),'string'],
             'image'=>['required','array'],
             'image.*'=>['image','required']
 		]);
-		
+
 		// check if we add to existing colection or create collection
 
 		if($data['collection']=='create'){
 			$collection = new Collection();
 			$collection->user_id = auth()->user()->id;
-			$collection->name ="No Name";
+			$collection->name =$request->input('collectionName');
 			$collection->save();
 		}else{
 			$collection = Collection::find($data['collection']);

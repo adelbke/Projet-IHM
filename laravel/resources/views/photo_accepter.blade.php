@@ -1,3 +1,10 @@
+@extends('layouts.dashboard')
+
+@section('content')
+@push('title')
+lésion Ajoutée
+@endpush
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -12,13 +19,12 @@
     </head>
     <body>
         <br>
-    <div class="container">
-        <div class="row card text-white bg-dark">
-            <h4 class="card-header">Envoi d'une photo</h4>
-            <div class="card-body">
-                <p class="card-text">Merci. Votre photo à bien été reçue et enregistrée.</p>
-            </div>
-        </div>
-    </div>
+        <br>
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Bravo!</h4>
+            <p class="mb-0">Votre lésion a bien été Ajouté.</p>
+          </div>
     </body>
 </html>
+
+@endsection
