@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Collection;
 use App\Image;
 use App\Lesion;
 use Illuminate\Http\Request;
@@ -27,16 +28,24 @@ class DashboardController extends Controller
             $userCount = DB::table('users')->where([['confirmed','=','Yes'],['role','=','Admin']])->count(); // number of contributors (Admins)
             $userPendingCount = DB::table('users')->where([['confirmed','=','Pending'],['role','=','Admin']])->count(); // number of pending users (Admins)
 
+            //Collection
+            $collectionList = Collection::all()->where('user_id','=',auth()->user()->id);
+            $collectionList->loadCount('lesions');
             // Get gender chart data
             $genderData = $this->genderData()->toJson();
             $usergenderData = $this->genderData(true)->toJson();
-            return view('Dashboard',compact('imageCount','collectionCount','userCount','genderData','usergenderData','userPendingCount','lesionCount'));
+            return view('Dashboard',compact('imageCount','collectionCount','userCount','genderData','usergenderData','userPendingCount','lesionCount','collectionList'));
 
         }else{
             // Number of images that belong to the admin
             $imageCount = DB::table('images')
                 ->join('lesions','images.lesion_id','=','lesions.id')
                 ->join('collections','lesions.collection_id','=','collections.id')->where('collections.user_id','=',auth()->user()->id)->get()->count();
+
+                 //Collection
+            $collectionList = Collection::all()->where('user_id','=',auth()->user()->id);
+            $collectionList->loadCount('lesions');
+
             // Number of collections that belong to the Admin
             $collectionCount = DB::table('collections')->where('user_id','=',auth()->user()->id)->count();
             $lesionCount = DB::table('lesions')
@@ -45,7 +54,7 @@ class DashboardController extends Controller
 
             $usergenderData = $this->genderData(true)->toJson();
 
-            return view('Dashboard',compact('imageCount','collectionCount','usergenderData','lesionCount'));
+            return view('Dashboard',compact('imageCount','collectionCount','usergenderData','lesionCount','collectionList'));
         }
 
     }
