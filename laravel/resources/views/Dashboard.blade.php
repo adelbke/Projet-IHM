@@ -24,6 +24,7 @@
               </div>
 
             <div class="container">
+                <br>
                 <form action="{{url('photo')}} " method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
@@ -162,6 +163,7 @@
                     <div class="row">
                         <button type="submit" class="btn mx-auto btn-light border-success">Ajouter</button>
                     </div>
+                    <br>
                 </form>
               </div>
            </div>
