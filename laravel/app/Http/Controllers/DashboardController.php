@@ -18,7 +18,8 @@ class DashboardController extends Controller
 
     public function index()
     {
-        return view('Dashboard');
-
+        $collectionList = Collection::all()->where('user_id','=',auth()->user()->id);
+        $collectionList->loadCount('lesions');
+        return view('Dashboard',compact('collectionList'));
     }
 }
