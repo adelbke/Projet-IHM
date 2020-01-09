@@ -19,9 +19,9 @@ class CollectionController extends Controller
 
     public function create()
     {
-       /* $collectionList = Collection::all()->where('user_id','=',auth()->user()->id);
+       $collectionList = Collection::all()->where('user_id','=',auth()->user()->id);
         $collectionList->loadCount('lesions');
-        return view('photo',compact('collectionList')); */
+        return view('photo',compact('collectionList'));
     }
 
     public function store(CollectionsRequest $request)

@@ -13,7 +13,7 @@
                 <li class="nav-item mx-md-2 mx-auto" v-for="item in links" v-bind:key="item.name">
                     <a v-if="!Array.isArray(item)" class="nav-link font-weight-bold text-dark hvr-underline-center-out hvr-grow" v-text="item.name" v-bind:href="item.href"> <span class="sr-only">(current)</span></a>
                 </li>
-                
+
             </ul>
             <div class="form-inline" v-if="firstName == undefined && lastName == undefined">
                 <div class="nav-item border-right pr-2 border-right">
@@ -32,16 +32,18 @@
                                 Dropdown
                             </button>
                     <div class="dropdown-menu" aria-labelledby="triggerId">
-                        <form class="" action="/logout" method="post">
-                            <input type="hidden" name="_token" v-bind:value="csrf">
-                            <button type="submit" class="dropdown-item">logout</button>
-                        </form>
-
                         <a href="/Dashboard" class="dropdown-item">
                             <i class="fas fa-tachometer-alt fa-sm"></i>
-                            Dashboard
+                            Tableau de bord
                         </a>
-                        
+
+
+                        <form class="" action="/logout" method="post">
+                            <input type="hidden" name="_token" v-bind:value="csrf">
+                            <button type="submit" class="dropdown-item"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>Déconnexion</button>
+                        </form>
+
+
                     </div>
                 </div>
             </div>
@@ -60,7 +62,7 @@ export default {
         'csrf'
     ],
 
-    data: function () {  
+    data: function () {
         return {
             links:[
                 {

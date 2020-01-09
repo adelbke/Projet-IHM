@@ -2272,6 +2272,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'navbar',
@@ -72614,7 +72616,7 @@ var render = function() {
   return _c("div", [
     _c("nav", { staticClass: "navbar sticky-top navbar-expand-lg bg-white" }, [
       _c("a", { staticClass: "navbar-brand mr-5", attrs: { href: "/" } }, [
-        _vm._v("Logo\r\n        ")
+        _vm._v("Logo\n        ")
       ]),
       _vm._v(" "),
       _vm._m(0),
@@ -72683,7 +72685,7 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\r\n                                Dropdown\r\n                            "
+                        "\n                                Dropdown\n                            "
                       )
                     ]
                   ),
@@ -72695,6 +72697,8 @@ var render = function() {
                       attrs: { "aria-labelledby": "triggerId" }
                     },
                     [
+                      _vm._m(3),
+                      _vm._v(" "),
                       _c(
                         "form",
                         { attrs: { action: "/logout", method: "post" } },
@@ -72704,18 +72708,9 @@ var render = function() {
                             domProps: { value: _vm.csrf }
                           }),
                           _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "dropdown-item",
-                              attrs: { type: "submit" }
-                            },
-                            [_vm._v("logout")]
-                          )
+                          _vm._m(4)
                         ]
-                      ),
-                      _vm._v(" "),
-                      _vm._m(3)
+                      )
                     ]
                   )
                 ])
@@ -72790,8 +72785,23 @@ var staticRenderFns = [
       [
         _c("i", { staticClass: "fas fa-tachometer-alt fa-sm" }),
         _vm._v(
-          "\r\n                            Dashboard\r\n                        "
+          "\n                            Tableau de bord\n                        "
         )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      { staticClass: "dropdown-item", attrs: { type: "submit" } },
+      [
+        _c("i", {
+          staticClass: "fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"
+        }),
+        _vm._v("Déconnexion")
       ]
     )
   }
