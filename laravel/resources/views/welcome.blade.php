@@ -3,24 +3,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <title>IHM</title>
-    
+
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
     <div id="app">
         @auth
         <navbar-component first-name="{{auth()->user()->Firstname}}"
-            last-name="{{auth()->user()->Lastname}}" 
+            last-name="{{auth()->user()->Lastname}}"
             csrf="{{ csrf_token() }}"></navbar-component>
             @endauth
             @guest
             <navbar-component></navbar-component>
             @endguest
-            <div style="background:linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ),url('https://freerangestock.com/sample/120965/overhead-view-of-a-laptop-and-a-stethoscope--medical-work.jpg');width:100%; background-size:cover; " 
+            <div style="background:linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ),url('https://cdn.pixabay.com/photo/2017/02/20/14/18/health-2082630_960_720.jpg');width:100%;height:450px; background-size:cover; "
             class="container-fluid pt-5 pb-4">
-            
+
                 <div class="row">
                     <div class="col-md-12 col-12">
                         <h1 class="h1 text-center text-white text-shadow"> ASIC </h1>
@@ -38,8 +38,8 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <!-- test -->
-                                    
-                                    
+
+
                                     <select name="dx" id="dx" class="custom-select d-flex mx-2">
                                         <option selected style="color:#bfbfbf;font-style:italic;font-weight:bold">lesion</option>
                                         <option value="akiec">Kératoses actiniques et carcinome intra-épithélial</option>
@@ -49,9 +49,9 @@
                                         <option value="mel">mélanome </option>
                                         <option value="nv">naevus mélanocytaires </option>
                                         <option value="vasc">lésions vasculaires</option>
-                                    </select> 
-                                    
-                                    
+                                    </select>
+
+
                                     <select name="dx_type" id="dx_type" class="custom-select mx-2">
                                         <option selected style="color:#bfbfbf;font-style:italic;font-weight:bold">type de confirmation</option>
                                         <option value="histo">histopathologie</option>
@@ -59,21 +59,21 @@
                                         <option value="consensus">consensus des spécialistes</option>
                                         <option value="confocal">microscopie confocale in-vivo</option>
                                     </select>
-                                    
+
                                     <select name="sex" id="sex" class="custom-select mx-2">
                                         <option selected style="color:#bfbfbf;font-style:italic;font-weight:bold">sexe</option>
                                         <option value="male">homme</option>
                                         <option value="female">femme</option>
                                         <option value="unknown">inconnu</option>
                                     </select>
-                                    
+
                                     <select name="age" id="age" class="custom-select mx-2">
                                         <option selected style="color:#bfbfbf;font-style:italic;font-weight:bold">age</option>
-                                        @for($i=0;$i<=110;$i++) 
+                                        @for($i=0;$i<=110;$i++)
                                         <option value="{{$i}}">{{ $i }}</option>
                                         @endfor
                                     </select>
-                                    
+
                                     <select name="dx" id="dx" class="custom-select d-flex mx-2">
                                         <option selected style="color:#bfbfbf;font-style:italic;font-weight:bold">localisation</option>
                                         <option value="abdomen">abdomen</option>
@@ -91,21 +91,21 @@
                                         <option value="upper_extremity">extrémité supérieure</option>
                                         <option value="unknown">inconnu</option>
                                     </select>
-                                    
-                                    
-                                    
+
+
+
                                     <button type="submit" class="btn btn-primary mx-2">filtrer</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div> --}}
-                
+
             </div>
-        
+
         <!----------------- la partie main  ------------------------------->
         <content-component></content-component>
-        
+
     </div>
     {{-- On garde ce code pour les routes de Login --}}
     {{-- @if (Route::has('login'))
@@ -114,14 +114,14 @@
         <a href="{{ url('/home') }}">Home</a>
         @else
         <a href="{{ route('login') }}">Login</a>
-        
+
         @if (Route::has('register'))
         <a href="{{ route('register') }}">Register</a>
         @endif
         @endauth
     </div>
     @endif --}}
-    
+
     <script src="js/app.js"></script>
 </body>
 </html>

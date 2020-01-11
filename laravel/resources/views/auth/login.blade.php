@@ -37,6 +37,7 @@
                                     </span>
                                 @enderror
                             </div>
+                            <p><i class="fas fa-eye" id="toggle-password"   onclick="LPass()" data-toggle="tooltip" data-placement="top" title="Afficher le mot de passe" style=" position: relative; top: 10px; "></i></p>
                         </div>
 
                         <div class="form-group row">
@@ -53,21 +54,37 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary" data-toggle="tooltip" title="Connexion">
                                     {{ __('Connexion') }}
                                 </button>
-
-                                @if (Route::has('password.request'))
+                                   @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Mot de passe oublié ?') }}
                                     </a>
                                 @endif
                             </div>
                         </div>
-                    </form>
+                </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+ function LPass() {
+    var x = document.getElementById("password");
+    var y = document.getElementById("toggle-password");
+
+    if (x.type === "password") {
+      x.type = "text";
+      y.className="fas fa-eye-slash";
+      y.title="Masquer mot de passe";
+
+    } else {
+      x.type = "password";
+      y.className="fas fa-eye";
+      y.title="Afficher mot de passe";
+    }
+  }</script>
 @endsection

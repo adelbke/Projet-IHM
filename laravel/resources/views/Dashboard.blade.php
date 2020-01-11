@@ -99,7 +99,7 @@
                             <div class="form-group">
                               <label for="age">Age</label>
                               <input type="number"
-                                class="form-control" name="age" id="age" aria-describedby="helpAge" placeholder="Age du Patient">
+                                class="form-control" name="age" id="age" aria-describedby="helpAge" placeholder="Age du Patient" min=0 max=120>
                               <small id="helpAge" class="form-text text-muted">Veuillez entrer l'age du patient</small>
                             </div>
                         </div>

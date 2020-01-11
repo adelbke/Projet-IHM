@@ -1,12 +1,12 @@
 <template>
   <div class="co">
       <nav class="main-acc main-sm">
-          <span class="icon icon-search"></span>
-          <h1 class="main-acc-tit">résultats de recherche</h1>
-             
+           <i class="fas fa-search" style="font-size: 30px;"></i>
+           <h1 class="main-acc-tit">   Résultats de recherche</h1>
+
            </nav>
 
-           <main class="main"> 
+           <main class="main">
                   <div class="container">
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatem quo placeat vel accusamus necessitatibus consequatur sit doloribus atque minus? Ullam dignissimos iste, assumenda tenetur pariatur officia quibusdam dolore voluptas.

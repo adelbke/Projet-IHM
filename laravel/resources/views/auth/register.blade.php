@@ -64,14 +64,16 @@
                                     </span>
                                 @enderror
                             </div>
+                            <i class="fas fa-eye" id="toggle-password"  onclick="Pass()" data-toggle="tooltip" data-placement="top" title="Afficher le mot de passe"style=" position: relative; top: 10px; "></i>
+
                         </div>
 
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirmation ') }}</label>
-
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                               <input id="password-confirm" type="password"  class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
+                            <i class="fas fa-eye" id="toggle-password1" data-toggle="tooltip" data-placement="top" title="Afficher le mot de passe" onclick="Cpass()" style=" position: relative; top: 10px; "></i>
                         </div>
 
                         <div class="form-group row mb-0">
@@ -87,4 +89,35 @@
         </div>
     </div>
 </div>
+<script>
+    function Pass() {
+   var x = document.getElementById("password");
+   var y = document.getElementById("toggle-password");
+
+   if (x.type === "password") {
+     x.type = "text";
+     y.className="fas fa-eye-slash";
+      y.title="Masquer mot de passe";
+
+   } else {
+     x.type = "password";
+     y.className="fas fa-eye";
+     y.title="Afficher mot de passe";
+   }
+ }
+ function Cpass() {
+   var x = document.getElementById("password-confirm");
+   var y = document.getElementById("toggle-password1");
+   if (x.type === "password") {
+     x.type = "text";
+     y.className="fas fa-eye-slash";
+      y.title="Masquer mot de passe";
+   } else {
+     x.type = "password";
+     y.className="fas fa-eye";
+     y.title="Afficher mot de passe";
+   }
+ }
+     </script>
+
 @endsection

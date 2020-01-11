@@ -10,8 +10,8 @@
             <hr class="sidebar-divider my-0">
             <li class="nav-item active">
                 <a class="nav-link" href="/">
-
-                    <span> Acceuil</span>
+                    <i class="fas fa-home"></i>
+                    <span>Acceuil</span>
                 </a>
             </li>
 
@@ -79,7 +79,7 @@
                         <div id="collapseUtilities" class="collapse {{Request::path() == "photo"? "show":""}}" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                             <div class="bg-white py-2 collapse-inner rounded">
                                 <h6 class="collapse-header">Gestion des Images</h6>
-                                <a class="collapse-item font-weight-bold {{Request::path() == "photo"? "text-primary":""}}" href="/photo">Ajouter</a>
+                                <a class="collapse-item font-weight-bold {{Request::path() == "photo"? "text-primary":""}}" href="/photo">Ajouter </a>
                                 <a class="collapse-item font-weight-bold" href="/lesions">Liste</a>
                             </div>
                         </div>
