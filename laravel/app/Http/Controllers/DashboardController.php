@@ -20,6 +20,19 @@ class DashboardController extends Controller
     {
         $collectionList = Collection::all()->where('user_id','=',auth()->user()->id);
         $collectionList->loadCount('lesions');
-        return view('Dashboard',compact('collectionList'));
+
+        $lesionsDataCount = $this->lesionsDataCount()->toJson();
+
+        return view('Dashboard',compact('collectionList','lesionsDataCount'));
+    }
+
+    public function lesionsDataCount()
+    {
+        $dx= ['akiec','bcc','bkl','df','mel','nv','vasc'];
+        $result = [];
+        foreach ($dx as $key => $value) {
+            $result[$value] = Lesion::where('dx','=',$value)->count();
+        }
+        return collect($result);
     }
 }

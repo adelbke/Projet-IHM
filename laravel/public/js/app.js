@@ -1829,6 +1829,172 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DxBarChartComponent.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/DxBarChartComponent.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    data: Object
+  },
+  computed: {
+    max: function max() {
+      var vm = this;
+      var max = 0;
+      Object.keys(vm.data).forEach(function (key) {
+        if (max < vm.data[key]) {
+          max = vm.data[key];
+        }
+      });
+      return max;
+    }
+  },
+  mounted: function mounted() {
+    function number_format(number, decimals, dec_point, thousands_sep) {
+      // *     example: number_format(1234.56, 2, ',', ' ');
+      // *     return: '1 234,56'
+      number = (number + '').replace(',', '').replace(' ', '');
+
+      var n = !isFinite(+number) ? 0 : +number,
+          prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
+          sep = typeof thousands_sep === 'undefined' ? ',' : thousands_sep,
+          dec = typeof dec_point === 'undefined' ? '.' : dec_point,
+          s = '',
+          toFixedFix = function toFixedFix(n, prec) {
+        var k = Math.pow(10, prec);
+        return '' + Math.round(n * k) / k;
+      }; // Fix for IE parseFloat(0.55).toFixed(0) = 0;
+
+
+      s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.');
+
+      if (s[0].length > 3) {
+        s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
+      }
+
+      if ((s[1] || '').length < prec) {
+        s[1] = s[1] || '';
+        s[1] += new Array(prec - s[1].length + 1).join('0');
+      }
+
+      return s.join(dec);
+    } // Bar Chart Example
+
+
+    var vm = this;
+    var ctx = document.getElementById("myBarChart");
+    var myBarChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ["Kératoses actiniques et carcinome intraépithélial", "carcinome basocellulaire", "lésions bénignes de type kératose", "dermatofibroma", "mélanome", "naevus mélanocytaires", "lésions vasculaires"],
+        datasets: [{
+          label: "Nombre de Cas",
+          backgroundColor: "#4e73df",
+          hoverBackgroundColor: "#2e59d9",
+          borderColor: "#4e73df",
+          data: [vm.data.akiec, vm.data.bcc, vm.data.bkl, vm.data.df, vm.data.mel, vm.data.nv, vm.data.vasc]
+        }]
+      },
+      options: {
+        maintainAspectRatio: false,
+        layout: {
+          padding: {
+            left: 10,
+            right: 25,
+            top: 25,
+            bottom: 0
+          }
+        },
+        scales: {
+          xAxes: [{
+            time: {
+              unit: 'lesion'
+            },
+            gridLines: {
+              display: false,
+              drawBorder: false
+            },
+            ticks: {
+              maxTicksLimit: 6
+            },
+            maxBarThickness: 25
+          }],
+          yAxes: [{
+            ticks: {
+              min: 0,
+              max: vm.max,
+              maxTicksLimit: 5,
+              padding: 10,
+              // Include a dollar sign in the ticks
+              callback: function callback(value, index, values) {
+                return number_format(value) + ' lesions';
+              }
+            },
+            gridLines: {
+              color: "rgb(234, 236, 244)",
+              zeroLineColor: "rgb(234, 236, 244)",
+              drawBorder: false,
+              borderDash: [2],
+              zeroLineBorderDash: [2]
+            }
+          }]
+        },
+        legend: {
+          display: false
+        },
+        tooltips: {
+          titleMarginBottom: 10,
+          titleFontColor: '#6e707e',
+          titleFontSize: 14,
+          backgroundColor: "rgb(255,255,255)",
+          bodyFontColor: "#858796",
+          borderColor: '#dddfeb',
+          borderWidth: 1,
+          xPadding: 15,
+          yPadding: 15,
+          displayColors: false,
+          caretPadding: 10,
+          callbacks: {
+            label: function label(tooltipItem, chart) {
+              var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+              return datasetLabel + ': ' + number_format(tooltipItem.yLabel) + " lesions";
+            }
+          }
+        }
+      }
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js& ***!
@@ -1906,6 +2072,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'filterComponent',
@@ -1920,6 +2093,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     formData: function formData() {
+      var vm = this;
       var result = [];
       this.data.forEach(function (element) {
         var string = '';
@@ -1928,12 +2102,21 @@ __webpack_require__.r(__webpack_exports__);
           element.values.forEach(function (item) {
             string = string + item.acronym + ',';
           });
+          string = string.substring(0, string.length - 1);
         }
 
         result.push({
           name: element.attr,
           value: string
         });
+      });
+      result.push({
+        name: 'ageMax',
+        value: vm.maximumAge
+      });
+      result.push({
+        name: 'ageMin',
+        value: vm.minimumAge
       });
       return result;
     }
@@ -1942,6 +2125,8 @@ __webpack_require__.r(__webpack_exports__);
     return {
       options: ['one', 'two', 'three'],
       value: [],
+      minimumAge: 1,
+      maximumAge: 120,
       data: [{
         attr: 'dx',
         placeholder: 'Catégorie de lésion',
@@ -2044,7 +2229,7 @@ __webpack_require__.r(__webpack_exports__);
           acronym: 'female'
         }, {
           name: 'Autre',
-          acronym: 'Other'
+          acronym: 'unknown'
         }]
       }]
     };
@@ -23019,7 +23204,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.multiselect__option[data-v-1c992a4a]{\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    white-space: nowrap;\n}\n.cursor-pointer[data-v-1c992a4a]{\r\n    cursor: pointer;\n}\r\n", ""]);
+exports.push([module.i, "\n.multiselect__option[data-v-1c992a4a]{\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n}\n.cursor-pointer[data-v-1c992a4a]{\n    cursor: pointer;\n}\n", ""]);
 
 // exports
 
@@ -72231,6 +72416,65 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DxBarChartComponent.vue?vue&type=template&id=c9cf333a&":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/DxBarChartComponent.vue?vue&type=template&id=c9cf333a& ***!
+  \**********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card shadow mb-4" }, [
+      _c("div", { staticClass: "card-header py-3" }, [
+        _c("h6", { staticClass: "m-0 font-weight-bold text-primary" }, [
+          _vm._v("Lésions de la base de données par type")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "card-body" }, [
+        _c("div", { staticClass: "chart-bar" }, [
+          _c("div", { staticClass: "chartjs-size-monitor" }, [
+            _c("div", { staticClass: "chartjs-size-monitor-expand" }, [
+              _c("div", {})
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "chartjs-size-monitor-shrink" }, [
+              _c("div", {})
+            ])
+          ]),
+          _vm._v(" "),
+          _c("canvas", {
+            staticClass: "chartjs-render-monitor",
+            staticStyle: { display: "block", width: "669px", height: "320px" },
+            attrs: { id: "myBarChart", width: "669", height: "320" }
+          })
+        ]),
+        _vm._v(" "),
+        _c("hr")
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&":
 /*!*******************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e& ***!
@@ -72328,6 +72572,10 @@ var render = function() {
                     "close-on-select": false,
                     "show-labels": true,
                     multiple: true,
+                    selectLabel: "",
+                    selectedLabel: "",
+                    deselectLabel: "",
+                    deselectGroupLabel: "",
                     "track-by": "name",
                     label: "name",
                     options: item.options
@@ -72345,49 +72593,115 @@ var render = function() {
             )
           }),
           _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "col-md-1 col-12 d-flex justify-content-end flex-row px-2 py-2"
-            },
-            [
-              _c(
-                "form",
-                {
-                  staticClass: "d-flex align-self-end",
-                  attrs: { id: "filterForm", action: "/search", method: "get" }
-                },
-                [
-                  _c("input", {
-                    attrs: { type: "hidden", name: "_token" },
-                    domProps: { value: _vm.csrf }
-                  }),
-                  _vm._v(" "),
-                  _vm._l(this.formData, function(item) {
-                    return _c("input", {
-                      key: item.name,
-                      attrs: { type: "hidden", name: item.name },
-                      domProps: { value: item.value }
-                    })
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-primary",
-                      attrs: { type: "submit", value: "submit" }
-                    },
-                    [_vm._v("Filtrer")]
-                  )
+          _c("div", { staticClass: "col-md-2 col-12 px-2 py-2" }, [
+            _c("span", { staticClass: "text-center" }, [_vm._v("Age:")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.minimumAge,
+                    expression: "minimumAge"
+                  }
                 ],
-                2
-              )
-            ]
-          )
+                staticClass: "form-control col mx-1 form-control-sm",
+                attrs: {
+                  type: "number",
+                  min: "1",
+                  max: "120",
+                  name: "ageMin",
+                  id: "ageMin",
+                  placeholder: "Min"
+                },
+                domProps: { value: _vm.minimumAge },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.minimumAge = $event.target.value
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.maximumAge,
+                    expression: "maximumAge"
+                  }
+                ],
+                staticClass: "form-control col mx-1 form-control-sm",
+                attrs: {
+                  type: "number",
+                  min: "1",
+                  max: "120",
+                  name: "ageMax",
+                  id: "ageMax",
+                  placeholder: "Max"
+                },
+                domProps: { value: _vm.maximumAge },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.maximumAge = $event.target.value
+                  }
+                }
+              })
+            ])
+          ])
         ],
         2
-      )
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "col-12 d-flex justify-content-center flex-row px-2 py-2"
+          },
+          [
+            _c(
+              "form",
+              {
+                staticClass: "d-flex align-self-end",
+                attrs: { id: "filterForm", action: "/search", method: "post" }
+              },
+              [
+                _c("input", {
+                  attrs: { type: "hidden", name: "_token" },
+                  domProps: { value: _vm.csrf }
+                }),
+                _vm._v(" "),
+                _vm._l(this.formData, function(item) {
+                  return _c("input", {
+                    key: item.name,
+                    attrs: { type: "hidden", name: item.name },
+                    domProps: { value: item.value }
+                  })
+                }),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-primary",
+                    attrs: { type: "submit", value: "submit" }
+                  },
+                  [_vm._v("Filtrer")]
+                )
+              ],
+              2
+            )
+          ]
+        )
+      ])
     ]
   )
 }
@@ -85017,6 +85331,7 @@ Vue.component('navbar-component', __webpack_require__(/*! ./components/layout/Na
 Vue.component('content-component', __webpack_require__(/*! ./components/contentComponent.vue */ "./resources/js/components/contentComponent.vue")["default"]);
 Vue.component('filter-component', __webpack_require__(/*! ./components/FilterComponent.vue */ "./resources/js/components/FilterComponent.vue")["default"]);
 Vue.component('genderpiechart-component', __webpack_require__(/*! ./components/GenderPieChartComponent.vue */ "./resources/js/components/GenderPieChartComponent.vue")["default"]);
+Vue.component('dxbarchart-component', __webpack_require__(/*! ./components/DxBarChartComponent.vue */ "./resources/js/components/DxBarChartComponent.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -85058,6 +85373,75 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/components/DxBarChartComponent.vue":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/DxBarChartComponent.vue ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _DxBarChartComponent_vue_vue_type_template_id_c9cf333a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DxBarChartComponent.vue?vue&type=template&id=c9cf333a& */ "./resources/js/components/DxBarChartComponent.vue?vue&type=template&id=c9cf333a&");
+/* harmony import */ var _DxBarChartComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DxBarChartComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/DxBarChartComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _DxBarChartComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _DxBarChartComponent_vue_vue_type_template_id_c9cf333a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _DxBarChartComponent_vue_vue_type_template_id_c9cf333a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/DxBarChartComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/DxBarChartComponent.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/DxBarChartComponent.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DxBarChartComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./DxBarChartComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DxBarChartComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DxBarChartComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/DxBarChartComponent.vue?vue&type=template&id=c9cf333a&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/DxBarChartComponent.vue?vue&type=template&id=c9cf333a& ***!
+  \****************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DxBarChartComponent_vue_vue_type_template_id_c9cf333a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./DxBarChartComponent.vue?vue&type=template&id=c9cf333a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DxBarChartComponent.vue?vue&type=template&id=c9cf333a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DxBarChartComponent_vue_vue_type_template_id_c9cf333a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DxBarChartComponent_vue_vue_type_template_id_c9cf333a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 
@@ -85462,8 +85846,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\wamp64\www\projet-n1-ihm\laravel\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\wamp64\www\projet-n1-ihm\laravel\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/adel/laravelTutorial/projet-n1-ihm/laravel/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/adel/laravelTutorial/projet-n1-ihm/laravel/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

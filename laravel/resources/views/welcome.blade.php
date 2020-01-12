@@ -18,7 +18,7 @@
             @guest
             <navbar-component></navbar-component>
             @endguest
-            <div style="background:linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ),url('https://image.freepik.com/vecteurs-libre/abstrait-bleu-clair-concept-innovation-medicale-modele-soins-sante-icone_44392-178.jpg');width:100%;height:450px; background-size:cover; "
+            <div style="background:linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ),url('https://cdn.pixabay.com/photo/2017/02/20/14/18/health-2082630_960_720.jpg');width:100%; background-size:cover; "
             class="container-fluid pt-5 pb-4">
 
                 <div class="row">

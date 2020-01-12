@@ -29,6 +29,7 @@ Vue.component('navbar-component',require('./components/layout/NavbarComponent.vu
 Vue.component('content-component',require('./components/contentComponent.vue').default);
 Vue.component('filter-component',require('./components/FilterComponent.vue').default);
 Vue.component('genderpiechart-component',require('./components/GenderPieChartComponent.vue').default);
+Vue.component('dxbarchart-component',require('./components/DxBarChartComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

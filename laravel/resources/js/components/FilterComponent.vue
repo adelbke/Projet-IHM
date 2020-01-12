@@ -9,25 +9,32 @@
                     :close-on-select="false"
                     :show-labels="true"
                     :multiple="true"
+                    selectLabel=""
+                    selectedLabel=""
+                    deselectLabel=""
+                    deselectGroupLabel=""
                     track-by="name"
                     label="name"
                     :options="item.options" ></multiselect>
             </div>
-            <div class="col-md-1 col-12 d-flex justify-content-end flex-row px-2 py-2">
+            <div class="col-md-2 col-12 px-2 py-2">
+                <span class="text-center">Age:</span>
+				<div class="row">
+                	<input type="number" class="form-control col mx-1 form-control-sm" min="1" max="120" name="ageMin" id="ageMin" placeholder="Min" v-model="minimumAge">
+                	<input type="number" class="form-control col mx-1 form-control-sm" min="1" max="120" name="ageMax" id="ageMax" placeholder="Max" v-model="maximumAge">
+				</div>
 
-                <form class="d-flex align-self-end" id="filterForm" action="/search" method="get">
+            </div>
+        </div>
+		<div class="row">
+			<div class="col-12 d-flex justify-content-center flex-row px-2 py-2">
+                <form class="d-flex align-self-end" id="filterForm" action="/search" method="post">
                     <input type="hidden" name="_token" v-bind:value="csrf">
                     <input v-for="item in this.formData" v-bind:key="item.name" type="hidden" v-bind:value="item.value" v-bind:name="item.name">
                     <button type="submit" value="submit" class="btn btn-primary">Filtrer</button>
                 </form>
             </div>
-            <!-- <div class="col-md-4 col-12 px-2 py-2">
-                <multiselect v-model="value" :searchable="false" :close-on-select="true" :show-labels="true" :multiple="true" placeholder="Catégorie de lésion" :options="this.options"></multiselect>
-            </div>
-            <div class="col-md-4 col-12 px-2 py-2">
-                <multiselect v-model="value" :searchable="false" :close-on-select="true" :show-labels="true" :multiple="true" placeholder="Catégorie de lésion" :options="this.options"></multiselect>
-            </div> -->
-        </div>
+		</div>
     </div>
 </template>
 
@@ -46,16 +53,21 @@ export default {
     },
     computed:{
         formData:function () {
+            var vm = this;
             var result = [];
             this.data.forEach(element => {
                 var string = '';
                 if(element.values != []){
                     element.values.forEach(item => {
-                    string = string + item.acronym + ',';
-                });
+                        string = string + item.acronym + ',';
+					});
+					string = string.substring(0, string.length - 1);
                 }
                 result.push({name:element.attr, value:string});
-            });
+			});
+				result.push({name:'ageMax',value:vm.maximumAge});
+				result.push({name:'ageMin',value:vm.minimumAge});
+
             return result;
         }
     },
@@ -63,6 +75,9 @@ export default {
         return {
             options:['one','two','three'],
             value:[],
+
+            minimumAge: 1,
+            maximumAge: 120,
 
             data:[
                 {
@@ -204,7 +219,7 @@ export default {
                         },
                         {
                             name:'Autre',
-                            acronym:'Other'
+                            acronym:'unknown'
                         },
                     ]
                 }
