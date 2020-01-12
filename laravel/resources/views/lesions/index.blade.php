@@ -6,57 +6,14 @@
 @endpush
 
 
-<div class="card-group"  >
+<div class="card text-light bg-primary ">
+    <div class="card-body">
+     <h5> Une abréviation est le raccourcissement d'un mot ou d'un groupe de mots, représentés alors par un caractère ou un groupe de caractères issus de ce mot. L'abréviation consiste donc toujours en une suppression, plus ou moins importante. Par exemple, « c'est-à-dire » peut s'abréger en « c.-à-d. ». </h5>
+     <h6>Nous avons nous-mêmes utilisé cette methode pour quelques termes que vous trouverez la sinification exacte en </h6>
+     <h4 align="center" ><a href="#Footer" class="badge badge-info"> cliquant ici</a> </h4>
+    </div>
+  </div>
 
-<div class="card text-white  mb-3 p-0" style="background-color:darksalmon">
-    <div class="card-body">
-      <h5 class="card-title">Catégorie de lesion</h5>
-      <p class="card-text ">
-          <ul class="card-text list-group  text-secondary">
-        <li class="list-group-item"> <strong>akiec </strong>: Kératoses actiniques et carcinome intraépithélial</li>
-        <li class="list-group-item"><strong>bcc :</strong> carcinome basocellulaire</li>
-        <li class="list-group-item"><strong>bkl :</strong>  lésions bénignes de type kératose</li>
-        <li class="list-group-item"><strong>df :</strong> dermatofibroma</li>
-        <li class="list-group-item"><strong>mel : </strong> mélanome</li>
-        <li class="list-group-item"><strong>vasc : </strong> lésions vasculaires</li>
-        <li class="list-group-item"><strong>nv : </strong> naevus mélanocytaires</li>
-      </ul></p>
-    </div>
-  </div>
-  <div class="card text-white  mb-3 p-0" style="background-color:#A0DB8E;">
-    <div class="card-body">
-      <h5 class="card-title">Moyen de Confirmation </h5>
-      <ul class="card-text text-secondary">
-        <li class="list-group-item"> <strong>histo </strong>: histopathologie </li>
-        <li class="list-group-item"><strong>follow-up :</strong> visite de suivi </li>
-        <li class="list-group-item"><strong>consensus :</strong>  consensus d'experts </li>
-        <li class="list-group-item"><strong>confocal :</strong> microscopie confocale </li>
-      </ul>
-    </div>
-  </div>
-  <div class="card text-white  mb-3 p-0" style="max-width: 18rem; background-color:#91EE9A">
-    <div class="card-body">
-      <h5 class="card-title">Localisation</h5>
-      <ul class="card-text text-secondary" >
-        <li class="list-group-item"> <strong>abdomen :</strong>abdomen</li>
-        <li class="list-group-item"><strong>back :</strong> dos</li>
-        <li class="list-group-item"><strong>chest :</strong>  poitrine</li>
-        <li class="list-group-item"><strong>ear :</strong> oreille</li>
-        <li class="list-group-item"><strong>face : </strong> visage</li>
-        <li class="list-group-item"><strong>foot : </strong>  pied</li>
-        <li class="list-group-item"><strong>genital : </strong> génitale </li>
-
-        <li class="list-group-item"> <strong>hand </strong>: main</li>
-        <li class="list-group-item"><strong>lower extremity :</strong>  membre inférieur</li>
-        <li class="list-group-item"><strong>neck :</strong>  cou</li>
-        <li class="list-group-item"><strong>scalp :</strong> cuir chevelu</li>
-        <li class="list-group-item"><strong>trunk : </strong> torse</li>
-        <li class="list-group-item"><strong>upper extremity : </strong>  membre supérieur</li>
-        <li class="list-group-item"><strong>unknown : </strong>  inconnue</li>
-      </ul>
-    </div>
-  </div>
-</div>
 
 
 
@@ -69,7 +26,7 @@
 
 <div id="accordion">
     <div class="card">
-      <div class="card-header "style="background-color:#0FF1CE" id="headingOne">
+      <div class="card-header" id="headingOne">
         <h5 class="mb-0">
         <button class="btn btn-link " data-toggle="collapse" data-target="#collapse{{$X->id}}" aria-expanded="true" aria-controls="collapseOne">
          Collection : {{$X->name}}
@@ -291,6 +248,55 @@
     </div>
     @endforeach
 
+    <div class="card-group" id="Footer"  >
 
+        <div class="card text-white  mb-3 p-0" style="background-color:darksalmon">
+            <div class="card-body">
+              <h5 class="card-title">Catégorie de lesion</h5>
+              <p class="card-text ">
+                  <ul class="card-text list-group  text-secondary">
+                <li class="list-group-item"> <strong>akiec </strong>: Kératoses actiniques et carcinome intraépithélial</li>
+                <li class="list-group-item"><strong>bcc :</strong> carcinome basocellulaire</li>
+                <li class="list-group-item"><strong>bkl :</strong>  lésions bénignes de type kératose</li>
+                <li class="list-group-item"><strong>df :</strong> dermatofibroma</li>
+                <li class="list-group-item"><strong>mel : </strong> mélanome</li>
+                <li class="list-group-item"><strong>vasc : </strong> lésions vasculaires</li>
+                <li class="list-group-item"><strong>nv : </strong> naevus mélanocytaires</li>
+              </ul></p>
+            </div>
+          </div>
+          <div class="card text-white  mb-3 p-0" style="background-color:#A0DB8E;">
+            <div class="card-body">
+              <h5 class="card-title">Moyen de Confirmation </h5>
+              <ul class="card-text text-secondary">
+                <li class="list-group-item"> <strong>histo </strong>: histopathologie </li>
+                <li class="list-group-item"><strong>follow-up :</strong> visite de suivi </li>
+                <li class="list-group-item"><strong>consensus :</strong>  consensus d'experts </li>
+                <li class="list-group-item"><strong>confocal :</strong> microscopie confocale </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card text-white  mb-3 p-0" style="max-width: 18rem; background-color:#91EE9A">
+            <div class="card-body">
+              <h5 class="card-title">Localisation</h5>
+              <ul class="card-text text-secondary" >
+                <li class="list-group-item"> <strong>abdomen :</strong>abdomen</li>
+                <li class="list-group-item"><strong>back :</strong> dos</li>
+                <li class="list-group-item"><strong>chest :</strong>  poitrine</li>
+                <li class="list-group-item"><strong>ear :</strong> oreille</li>
+                <li class="list-group-item"><strong>face : </strong> visage</li>
+                <li class="list-group-item"><strong>foot : </strong>  pied</li>
+                <li class="list-group-item"><strong>genital : </strong> génitale </li>
+                <li class="list-group-item"> <strong>hand </strong>: main</li>
+                <li class="list-group-item"><strong>lower extremity :</strong>  membre inférieur</li>
+                <li class="list-group-item"><strong>neck :</strong>  cou</li>
+                <li class="list-group-item"><strong>scalp :</strong> cuir chevelu</li>
+                <li class="list-group-item"><strong>trunk : </strong> torse</li>
+                <li class="list-group-item"><strong>upper extremity : </strong>  membre supérieur</li>
+                <li class="list-group-item"><strong>unknown : </strong>  inconnue</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
 @endsection
