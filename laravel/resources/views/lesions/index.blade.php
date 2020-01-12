@@ -6,15 +6,16 @@
 @endpush
 
 
-<div class="card text-light bg-primary ">
-    <div class="card-body">
-     <h5> Une abréviation est le raccourcissement d'un mot ou d'un groupe de mots, représentés alors par un caractère ou un groupe de caractères issus de ce mot. L'abréviation consiste donc toujours en une suppression, plus ou moins importante. Par exemple, « c'est-à-dire » peut s'abréger en « c.-à-d. ». </h5>
+
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <h5> Une abréviation est le raccourcissement d'un mot ou d'un groupe de mots, représentés alors par un caractère ou un groupe de caractères issus de ce mot. L'abréviation consiste donc toujours en une suppression, plus ou moins importante. Par exemple, « c'est-à-dire » peut s'abréger en « c.-à-d. ». </h5>
      <h6>Nous avons nous-mêmes utilisé cette methode pour quelques termes que vous trouverez la sinification exacte en </h6>
      <h4 align="center" ><a href="#Footer" class="badge badge-info"> cliquant ici</a> </h4>
-    </div>
+
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
   </div>
-
-
 
 
 
@@ -250,7 +251,7 @@
 
     <div class="card-group" id="Footer"  >
 
-        <div class="card text-white  mb-3 p-0" style="background-color:darksalmon">
+        <div class="card text-white  mb-3 p-0" style="background-color:#4b4f63;">
             <div class="card-body">
               <h5 class="card-title">Catégorie de lesion</h5>
               <p class="card-text ">
@@ -265,7 +266,7 @@
               </ul></p>
             </div>
           </div>
-          <div class="card text-white  mb-3 p-0" style="background-color:#A0DB8E;">
+          <div class="card text-white  mb-3 p-0" style="background-color:#717485;">
             <div class="card-body">
               <h5 class="card-title">Moyen de Confirmation </h5>
               <ul class="card-text text-secondary">
@@ -273,10 +274,12 @@
                 <li class="list-group-item"><strong>follow-up :</strong> visite de suivi </li>
                 <li class="list-group-item"><strong>consensus :</strong>  consensus d'experts </li>
                 <li class="list-group-item"><strong>confocal :</strong> microscopie confocale </li>
+
               </ul>
             </div>
+
           </div>
-          <div class="card text-white  mb-3 p-0" style="max-width: 18rem; background-color:#91EE9A">
+          <div class="card text-white  mb-3 p-0" style="max-width: 18rem; background-color:#9092a1;">
             <div class="card-body">
               <h5 class="card-title">Localisation</h5>
               <ul class="card-text text-secondary" >
@@ -295,8 +298,10 @@
                 <li class="list-group-item"><strong>upper extremity : </strong>  membre supérieur</li>
                 <li class="list-group-item"><strong>unknown : </strong>  inconnue</li>
               </ul>
+
             </div>
           </div>
         </div>
 
+        <h3 align="right" style="position: fixed;bottom: 0;right: 0;"> <a href="#app" class="badge badge-primary " ><i class="fas fa-arrow-up"></i> </a></h3>
 @endsection
