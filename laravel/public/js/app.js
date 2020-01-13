@@ -23204,7 +23204,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.multiselect__option[data-v-1c992a4a]{\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n}\n.cursor-pointer[data-v-1c992a4a]{\n    cursor: pointer;\n}\n", ""]);
+exports.push([module.i, "\n.multiselect__option[data-v-1c992a4a]{\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    white-space: nowrap;\n}\n.cursor-pointer[data-v-1c992a4a]{\r\n    cursor: pointer;\n}\r\n", ""]);
 
 // exports
 
@@ -23223,7 +23223,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n************  main  ****************\n\n.main-acc[data-v-fbd30662] {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-align: center;\n          align-items: center;\n  position: relative;\n  top: -2.25em;\n  width: 100%;\n  margin: 0 auto;\n  max-width: 75em;\n  max-height: 78px;\n  min-height: 78px;\n  padding: 1.5em 0;\n  overflow: hidden;\n  z-index: 2;\n  border-top-right-radius: 3px;\n  border-top-left-radius: 3px;\n  border-bottom: 1px solid #eaeaea;\n  background-color: white;\n}\n************  icon ****************\n\n\n************  main contenu ****************\n.main[data-v-fbd30662]{\n  position: relative;\n  top:-2.25em;\n  margin-top: -2.25em;\n  margin-bottom: 2.25em;\n  padding: 2.25em 0 3em;\n  border-radius: 3px;\n  background-color: white;\n  width: 100%;\n  max-width: 75em;\n  margin: 0 auto;\n}\n.co[data-v-fbd30662]{\n    background: var(--light);\n}\n.main-acc-tit[data-v-fbd30662]{\n    display: inline;\n}\n", ""]);
+exports.push([module.i, "\n************  main  ****************\r\n\r\n.main-acc[data-v-fbd30662] {\r\n  display: -webkit-box;\r\n  display: flex;\r\n  -webkit-box-align: center;\r\n          align-items: center;\r\n  position: relative;\r\n  top: -2.25em;\r\n  width: 100%;\r\n  margin: 0 auto;\r\n  max-width: 75em;\r\n  max-height: 78px;\r\n  min-height: 78px;\r\n  padding: 1.5em 0;\r\n  overflow: hidden;\r\n  z-index: 2;\r\n  border-top-right-radius: 3px;\r\n  border-top-left-radius: 3px;\r\n  border-bottom: 1px solid #eaeaea;\r\n  background-color: white;\n}\n************  icon ****************\r\n\r\n\r\n************  main contenu ****************\r\n.main[data-v-fbd30662]{\r\n  position: relative;\r\n  top:-2.25em;\r\n  margin-top: -2.25em;\r\n  margin-bottom: 2.25em;\r\n  padding: 2.25em 0 3em;\r\n  border-radius: 3px;\r\n  background-color: white;\r\n  width: 100%;\r\n  max-width: 75em;\r\n  margin: 0 auto;\n}\n.co[data-v-fbd30662]{\r\n    background: var(--light);\n}\n.main-acc-tit[data-v-fbd30662]{\r\n    display: inline;\n}\r\n", ""]);
 
 // exports
 
@@ -72933,7 +72933,7 @@ var render = function() {
   return _c("div", [
     _c("nav", { staticClass: "navbar sticky-top navbar-expand-lg bg-white" }, [
       _c("a", { staticClass: "navbar-brand mr-5", attrs: { href: "/" } }, [
-        _vm._v("Logo\n        ")
+        _vm._v("Logo\r\n        ")
       ]),
       _vm._v(" "),
       _vm._m(0),
@@ -73002,7 +73002,7 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                                Dropdown\n                            "
+                        "\r\n                                Dropdown\r\n                            "
                       )
                     ]
                   ),
@@ -73102,7 +73102,7 @@ var staticRenderFns = [
       [
         _c("i", { staticClass: "fas fa-tachometer-alt fa-sm" }),
         _vm._v(
-          "\n                            Tableau de bord\n                        "
+          "\r\n                            Tableau de bord\r\n                        "
         )
       ]
     )
@@ -85846,8 +85846,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/adel/laravelTutorial/projet-n1-ihm/laravel/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/adel/laravelTutorial/projet-n1-ihm/laravel/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\laragon\www\projet-n1-ihm\laravel\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\projet-n1-ihm\laravel\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

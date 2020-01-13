@@ -8,11 +8,22 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
-	<!-- Page Heading -->
+	<!--  afficher une notification si la lésion à bien été enregistré -->
+	@if (session()->has('ajouter'))
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+		{{ session()->get('ajouter')}}
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	  </div>
+	  @endif
+
+	
 	<div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Tableau de bord</h1>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fas fa-download fa-sm text-white-50"></i> Ajouter une lesion</button>
-
+		
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fas fa-download fa-sm text-white-50"></i> Ajouter une lesion</button>
+		
        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
          <div class="modal-dialog modal-lg">
            <div class="modal-content">
@@ -25,7 +36,7 @@
 
             <div class="container">
                 <br>
-                <form action="{{url('photo')}} " method="POST" enctype="multipart/form-data">
+                <form action="{{url('dash')}} " method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
                         <div class="col-md-6 col-lg-6 col-12">
@@ -170,6 +181,10 @@
          </div>
        </div>
 	</div>
+
+
+
+
 
 	<!-- Content Row -->
 	<div class="row">

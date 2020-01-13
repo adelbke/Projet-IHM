@@ -19,7 +19,7 @@ class CollectionController extends Controller
 
     public function create()
     {
-       $collectionList = Collection::all()->where('user_id','=',auth()->user()->id);
+        $collectionList = Collection::all()->where('user_id','=',auth()->user()->id);
         $collectionList->loadCount('lesions');
         return view('photo',compact('collectionList'));
     }
@@ -66,7 +66,8 @@ class CollectionController extends Controller
 			$im->lesion_id= $le->id;
 			$im->save();
 		}
-        return view('photo_accepter');
+       $request->session()->flash('ajouter', "Votre lésion a bien été Ajouté.");
+        return redirect('Dashboard');
 
 
         $Collect = new Collection();
@@ -88,6 +89,9 @@ class CollectionController extends Controller
          $im->path = '/storage/'.$im->path;
          $im->lesion_id= $le->id;
          $im->save(); }
-        return view('photo_accepter');
+
+         $request->session()->flash('ajouter', "Votre lésion a bien été Ajouté.");
+         return redirect('Dashboard');
+        
     }
 }

@@ -2,46 +2,44 @@
 
 @section('content')
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <div class="card text-center">
-        <div class="card-header">
-          User Profile
-        </div>
-        <div class="card-body">
-          <table class="table table-sm">
-              <tbody>
-                <tr>
-                  <th scope="row">Nom</th>
-                <td>{{auth()->user()->Firstname}}</td>
+<div class="container">
+<h1 class="text-center">Profile</h1>
+<br>
 
-                </tr>
-                <tr>
-                  <th scope="row">Prénom</th>
-                  <td>{{auth()->user()->Lastname}}</td>
+<table class="table">
+  <tr>
+    <td>Nom</td>
+    <td>{{auth()->user()->Lastname}}</td>
+  </tr>
+  <tr>
+    <td>Prénom</td>
+    <td>{{auth()->user()->Firstname}}</td>
+  </tr>
+  <tr>
+    <td>Adresse E-Mail</td>
+    
+  <td>{{auth()->user()->email}} </td>
+  </tr>
+  <tr>
+    <td>Rôle</td>
+    <td>
+      @if(auth()->user()->role=="Admin")
+      Admin
+      @else
+      Super Admin  
+      @endif
 
-                </tr>
-                <tr>
-                  <th scope="row">Email</th>
-                  <td >{{auth()->user()->email}}</td>
-                </tr>
-                <tr>
-                  <th scope="row">Role</th>
-                  <td >{{auth()->user()->role}}</td>
-                </tr>
-              </tbody>
-            </table>
-            <a href="#" class="btn btn-primary">Modifier</a>
-        </div>
-      </div>
-</body>
-</html>
+
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+
+</table>
+</div>       
+
+
 
 @endsection
