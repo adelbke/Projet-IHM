@@ -6,15 +6,11 @@ use App\Lesion;
 use Barryvdh\Debugbar\Twig\Extension\Debug;
 use DebugBar\DebugBar;
 use Illuminate\Http\Request;
-<<<<<<< Updated upstream
 use App\Collection;
-use App\Lesion;
 use App\Image;
-=======
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\Rule;
->>>>>>> Stashed changes
 
 class LesionController extends Controller
 {
@@ -73,39 +69,50 @@ class LesionController extends Controller
 
         // dd($data['dx']);
         
-        foreach ($data['dx'] as $key=>$value) {
-            if($key == 0){
-                $results->Where('dx','=',$value);
-            }else{
-                $results->orWhere('dx','=',$value);
+        if($data['dx'] != [""]){
+            foreach ($data['dx'] as $key=>$value) {
+                if($key == 0){
+                    $results->Where('dx','=',$value);
+                }else{
+                    $results->orWhere('dx','=',$value);
+                }
             }
         }
         
-        foreach ($request['dx_type'] as $key=>$value) {
-            if($key == 0){
-                $results->Where('dx_type','=',$value);
-            }else{
-                $results->orWhere('dx_type','=',$value);
+        if($data['dx_type'] != [""]){
+            foreach ($request['dx_type'] as $key=>$value) {
+                if($key == 0){
+                    $results->Where('dx_type','=',$value);
+                }else{
+                    $results->orWhere('dx_type','=',$value);
+                }
             }
         }
 
-        foreach ($data['sex'] as $key=>$value) {
-            if($key == 0){
-                $results->Where('sex','=',$value);
-            }else{
-                $results->orWhere('sex','=',$value);
+        if($data['sex'] != [""]){
+            foreach ($data['sex'] as $key=>$value) {
+                if($key == 0){
+                    $results->Where('sex','=',$value);
+                }else{
+                    $results->orWhere('sex','=',$value);
+                }
             }
         }
 
-        foreach ($data['localization'] as $key=>$value) {
-            if($key == 0){
-                $results->Where('localization','=',$value);
-            }else{
-                $results->orWhere('localization','=',$value);
+        if($data['localization'] != [""]){
+            foreach ($data['localization'] as $key=>$value) {
+                if($key == 0){
+                    $results->Where('localization','=',$value);
+                }else{
+                    $results->orWhere('localization','=',$value);
+                }
             }
         }
 
-        $results->whereBetween('age',[$data['ageMin'],$data['ageMax']])->paginate(20);
+        $results->whereBetween('age',[$data['ageMin'],$data['ageMax']]);
+
+        // dd($results->paginate(20));
+        $results->paginate(20);
 
         return view('search',compact('results'));
 

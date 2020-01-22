@@ -29,17 +29,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Route Dashboard
 Route::middleware('auth')->get('/Dashboard','DashboardController@index');
 
-<<<<<<< Updated upstream
-Route::post('/search','LesionController@search');
-
-Route::middleware('auth')->get('photo', 'CollectionController@create');
-Route::middleware('auth')->post('photo', 'CollectionController@store');
-=======
 Route::middleware('auth')->get('dash', 'CollectionController@create');
 Route::middleware('auth')->post('dash', 'CollectionController@store');
->>>>>>> Stashed changes
 
 Route::middleware('auth')->get('/lesions','LesionController@index');
+
+Route::post('/search','LesionController@search');
 
 Route::middleware('auth','superadmin')->resource('list','UserController')->only('index','destroy','update');
 

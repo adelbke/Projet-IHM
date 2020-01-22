@@ -72,14 +72,14 @@
 
                     <!-- Nav Item - Utilities Collapse Menu -->
                     <li class="nav-item">
-                        <a class="nav-link {{Request::path() == "photo"? "":"collapsed"}}" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                        <a class="nav-link {{Request::path() == "dash"? "":"collapsed"}}" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
                             <i class="fas fa-images fa-sm "></i>
                             <span>Images</span>
                         </a>
-                        <div id="collapseUtilities" class="collapse {{Request::path() == "photo"? "show":""}}" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                        <div id="collapseUtilities" class="collapse {{Request::path() == "dash"? "show":""}}" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                             <div class="bg-white py-2 collapse-inner rounded">
                                 <h6 class="collapse-header">Gestion des Images</h6>
-                                <a class="collapse-item font-weight-bold {{Request::path() == "photo"? "text-primary":""}}" href="/photo">Ajouter </a>
+                                <a class="collapse-item font-weight-bold {{Request::path() == "dash"? "text-primary":""}}" href="/dash">Ajouter </a>
                                 <a class="collapse-item font-weight-bold" href="/lesions">Liste</a>
                             </div>
                         </div>

@@ -1,9 +1,5 @@
 @include('layouts.app')
 
 @section('content')
-    <style>
-        body{
-            background:var(--secondary);
-        }
-    </style>
+{{var_dump($results)}}
 @endsection
