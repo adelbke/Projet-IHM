@@ -80,7 +80,7 @@
                             <div class="bg-white py-2 collapse-inner rounded">
                                 <h6 class="collapse-header">Gestion des Images</h6>
                                 <a class="collapse-item font-weight-bold {{Request::path() == "dash"? "text-primary":""}}" href="/dash">Ajouter </a>
-                                <a class="collapse-item font-weight-bold" href="/lesions">Liste</a>
+                                <a class="collapse-item font-weight-bold" href="/Collections">Liste</a>
                             </div>
                         </div>
                     </li>
@@ -101,14 +101,12 @@
                         </a>
                         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                             <div class="bg-white py-2 collapse-inner rounded">
-                                <h6 class="collapse-header">Login Screens:</h6>
-                                <a class="collapse-item" href="login.html">Login</a>
-                                <a class="collapse-item" href="register.html">Register</a>
-                                <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                                <h6 class="collapse-header">Des liens:</h6>
+                                <a class="collapse-item" href="#">Lien 1</a>
+                                <a class="collapse-item" href="#">Lien 2</a>
+                                <a class="collapse-item" href="#">Lien 3</a>
                                 <div class="collapse-divider"></div>
-                                <h6 class="collapse-header">Other Pages:</h6>
-                                <a class="collapse-item" href="404.html">404 Page</a>
-                                <a class="collapse-item" href="blank.html">Blank Page</a>
+
                             </div>
                         </div>
                     </li>

@@ -23444,7 +23444,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.multiselect__option[data-v-1c992a4a]{\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n}\n.cursor-pointer[data-v-1c992a4a]{\n    cursor: pointer;\n}\n", ""]);
+exports.push([module.i, "\n.multiselect__option[data-v-1c992a4a]{\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    white-space: nowrap;\n}\n.cursor-pointer[data-v-1c992a4a]{\r\n    cursor: pointer;\n}\r\n", ""]);
 
 // exports
 
@@ -73347,7 +73347,7 @@ var render = function() {
   return _c("div", [
     _c("nav", { staticClass: "navbar navbar-expand-lg bg-white" }, [
       _c("a", { staticClass: "navbar-brand mr-5", attrs: { href: "/" } }, [
-        _vm._v("Logo\n        ")
+        _vm._v("Logo\r\n        ")
       ]),
       _vm._v(" "),
       _vm._m(0),
@@ -73416,7 +73416,7 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                                Dropdown\n                            "
+                        "\r\n                                Dropdown\r\n                            "
                       )
                     ]
                   ),
@@ -73516,7 +73516,7 @@ var staticRenderFns = [
       [
         _c("i", { staticClass: "fas fa-tachometer-alt fa-sm" }),
         _vm._v(
-          "\n                            Tableau de bord\n                        "
+          "\r\n                            Tableau de bord\r\n                        "
         )
       ]
     )
@@ -86330,8 +86330,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/adel/laravelTutorial/projet-n1-ihm/laravel/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/adel/laravelTutorial/projet-n1-ihm/laravel/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\wamp64\www\projet-n1-ihm\laravel\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\wamp64\www\projet-n1-ihm\laravel\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

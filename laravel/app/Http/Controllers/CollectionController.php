@@ -17,6 +17,24 @@ class CollectionController extends Controller
         $this->middleware(['auth'=>'verified']);
     }
 
+    public function index()
+    {
+        if(auth()->user()->role == "Admin"){
+            $Collection = Collection::where('user_id','=',auth()->user()->id)->paginate(9);
+            $Lesion = Lesion::get('collection_id');
+
+            return view('collection.index',compact('Collection','Lesion'));
+        }
+        if(auth()->user()->role == "SuperAdmin"){
+            $Collection = Collection::with("user")->paginate(9);
+            $Lesion = Lesion::get('collection_id');
+
+
+
+            return view('collection.superadmin.index',compact('Collection','Lesion'));
+        }
+    }
+
     public function create()
     {
         $collectionList = Collection::all()->where('user_id','=',auth()->user()->id);
@@ -92,6 +110,6 @@ class CollectionController extends Controller
 
          $request->session()->flash('ajouter', "Votre lésion a bien été Ajouté.");
          return redirect('Dashboard');
-        
+
     }
 }

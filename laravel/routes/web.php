@@ -32,7 +32,8 @@ Route::middleware('auth')->get('/Dashboard','DashboardController@index');
 Route::middleware('auth')->get('dash', 'CollectionController@create');
 Route::middleware('auth')->post('dash', 'CollectionController@store');
 
-Route::middleware('auth')->get('/lesions','LesionController@index');
+Route::middleware('auth')->get('/Collections','CollectionController@index');
+Route::middleware('auth')->resource('/Lesions','LesionController')->only('show');
 
 Route::get('/search','SearchController@search');
 

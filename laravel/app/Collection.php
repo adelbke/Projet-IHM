@@ -12,4 +12,9 @@ class Collection extends Model
     {
         return $this->hasMany(Lesion::class);
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

@@ -20,21 +20,16 @@ class LesionController extends Controller
 
     }
 
-    public function index()
+    public function show($id)
     {
-        if(auth()->user()->role == "Admin"){
-            $Collection = Collection::all()->where('user_id','=',auth()->user()->id);
-            $Lesion = Lesion::all();
-            $Image = Image::all();
-            return view('lesions.index',compact('Collection','Lesion','Image'));
-        }
-        if(auth()->user()->role == "SuperAdmin"){
-            $Collection = Collection::all();
-            $Lesion = Lesion::all();
-            $Image = Image::all();
 
-            return view('lesions.superadmin.index',compact('Collection','Lesion','Image'));
-        }
+            $Collection = Collection::findOrFail($id);
+            $Lesion = Lesion::with("images")->where('collection_id','=',$Collection->id)->paginate(4);
+
+
+
+            return view('lesions.lesionsList',compact('Lesion'));
+
     }
 
     //
@@ -68,7 +63,7 @@ class LesionController extends Controller
         $results = Lesion::with(['images']);
 
         // dd($data['dx']);
-        
+
         if($data['dx'] != [""]){
             foreach ($data['dx'] as $key=>$value) {
                 if($key == 0){
@@ -78,7 +73,7 @@ class LesionController extends Controller
                 }
             }
         }
-        
+
         if($data['dx_type'] != [""]){
             foreach ($request['dx_type'] as $key=>$value) {
                 if($key == 0){
