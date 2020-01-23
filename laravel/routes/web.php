@@ -34,7 +34,7 @@ Route::middleware('auth')->post('dash', 'CollectionController@store');
 
 Route::middleware('auth')->get('/lesions','LesionController@index');
 
-Route::post('/search','LesionController@search');
+Route::get('/search','SearchController@search');
 
 Route::middleware('auth','superadmin')->resource('list','UserController')->only('index','destroy','update');
 

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Lesion;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class HomeController extends Controller
 {
@@ -25,4 +27,8 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    // The search feature
+
+    
 }

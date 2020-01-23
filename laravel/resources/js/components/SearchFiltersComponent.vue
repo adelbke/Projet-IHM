@@ -1,32 +1,28 @@
 <template>
-    <div class="container bg-white rounded border border-secondary shadow py-2 px-4">
-        <h4 class="text-center pt-2 h5">Recherchez une image dans nôtre Collection de Bases d'images</h4>
-        <div class="row">
-            <div class="col-md col-12 px-2 py-2 cursor-pointer" v-for="item in this.data" v-bind:key="item.placeholder">
-                <span class="text-center" v-text="item.placeholder"></span>
-                <multiselect v-model="item.values" placeholder="Tous"
-                    :searchable="false"
-                    :close-on-select="false"
-                    :show-labels="true"
-                    :multiple="true"
-                    selectLabel=""
-                    selectedLabel=""
-                    deselectLabel=""
-                    deselectGroupLabel=""
-                    track-by="name"
-                    label="name"
-                    :options="item.options" class="bg-light" ></multiselect>
-            </div>
-            <div class="col-md-2 col-12 px-2 py-2">
-                <span class="text-center">Age:</span>
-				<div class="row">
-                	<input type="number" class="form-control col mx-1 form-control-sm" min="1" max="120" name="ageMin" id="ageMin" placeholder="Min" v-model="minimumAge">
-                	<input type="number" class="form-control col mx-1 form-control-sm" min="1" max="120" name="ageMax" id="ageMax" placeholder="Max" v-model="maximumAge">
-				</div>
 
-            </div>
+    <div class="container">
+        <div class="row mb-3" v-for="item in this.data" v-bind:key="item.placeholder" > 
+            <span class="text-center" v-text="item.placeholder"></span>
+            <multiselect v-model="item.values" placeholder="Tous"
+                :searchable="false"
+                :close-on-select="false"
+                :show-labels="true"
+                :multiple="true"
+                selectLabel=""
+                selectedLabel=""
+                deselectLabel=""
+                deselectGroupLabel=""
+                track-by="name"
+                label="name"
+                :options="item.options" class="bg-light" ></multiselect>
         </div>
-		<div class="row">
+            <div class="row mb-2">
+	            <span>Age:</span>
+
+                <input type="number" class="form-control col mx-1 form-control-sm" min="1" max="120" name="ageMin" id="ageMin" placeholder="Min" v-model="minimumAge">
+                <input type="number" class="form-control col mx-1 form-control-sm" min="1" max="120" name="ageMax" id="ageMax" placeholder="Max" v-model="maximumAge">
+            </div>
+        <div class="row">
 			<div class="col-12 d-flex justify-content-center flex-row px-2 py-2">
                 <form class="d-flex align-self-end" id="filterForm" action="/search" method="get">
                     <input type="hidden" name="_token" v-bind:value="csrf">
@@ -36,14 +32,14 @@
             </div>
 		</div>
     </div>
+  
 </template>
 
 <script>
 import Multiselect from 'vue-multiselect';
 export default {
-    name:'filterComponent',
     mounted(){
-        var vm = this;
+        document.getElementsByClassName
     },
     components:{
         Multiselect
@@ -83,8 +79,8 @@ export default {
             options:['one','two','three'],
             value:[],
 
-            minimumAge: Number,
-            maximumAge: Number,
+            minimumAge: 1,
+            maximumAge: 120,
 
             data:[
                 {
@@ -236,14 +232,6 @@ export default {
 }
 </script>
 
-<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
 <style scoped>
-.multiselect__option{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-.cursor-pointer{
-    cursor: pointer;
-}
+
 </style>

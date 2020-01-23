@@ -30,6 +30,7 @@ Vue.component('content-component',require('./components/contentComponent.vue').d
 Vue.component('filter-component',require('./components/FilterComponent.vue').default);
 Vue.component('genderpiechart-component',require('./components/GenderPieChartComponent.vue').default);
 Vue.component('dxbarchart-component',require('./components/DxBarChartComponent.vue').default);
+Vue.component('searchfilters-component',require('./components/SearchFiltersComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

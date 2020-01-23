@@ -4,6 +4,9 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter:400,700&display=swap&subset=latin-ext');
 $font-family-base: 'Bitter', serif;
 
+// Overrides
+@import './variables';
+
 // Bootstrap
 @import '~bootstrap-scss/bootstrap.scss';
 
@@ -11,15 +14,14 @@ $font-family-base: 'Bitter', serif;
 
 
 
-// text-hover.css
-@import '~hover-text.css/scss/text-hover.scss';
+    // text-hover.css
+    @import '~hover-text.css/scss/text-hover.scss';
 
-// Font awesome
-@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
-@import '~@fortawesome/fontawesome-free/scss/solid.scss';
-// $fa-font-path: "../webfonts";
+    // Font awesome
+    @import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+    @import '~@fortawesome/fontawesome-free/scss/solid.scss';
+    // $fa-font-path: "../webfonts";
 
-@import './variables';
 
 
 
