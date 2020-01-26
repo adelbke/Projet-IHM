@@ -21,7 +21,7 @@
     <h5 class="card-title">{{$item->name}}</h5>
     <h6 class="card-subtitle mb-2 text-muted"> </h6>
     <p class="card-text">Nombre de lesions : {{$nb}} </p>
-    <a href="#" class="card-link">Afficher les lesions</a>
+    <a href="{{url('/Lesions',['Lesion'=>$item->id])}}" class="card-link">Afficher les lesions</a>
 
   </div>
 </div>

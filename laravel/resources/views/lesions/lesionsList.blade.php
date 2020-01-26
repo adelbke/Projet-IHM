@@ -23,7 +23,7 @@
                                     <li>-sexe: {{config('global.lesion_sex')[$X->sex]}}</li>
                                     <li>-Age: {{$X->age}}</li>
                                 </ul>
-                            <a href="#" class="btn btn-link hvr-fade d-flex align-self-end">Voir Images</a>
+                            <a href="{{url('/Image',['Image'=>$X->id])}}" class="btn btn-link hvr-fade d-flex align-self-end">Voir Images</a>
                             </div>
                         </div>
                     </div>
