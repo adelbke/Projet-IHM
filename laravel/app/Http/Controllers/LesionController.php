@@ -112,4 +112,16 @@ class LesionController extends Controller
         return view('search',compact('results'));
 
     }
+    public function destroy(Request $request,$id){
+        $Lesion=Lesion::findOrFail($id);
+        $Image= Image::where('lesion_id','=',$id)->get();
+        foreach($Image as $I)
+        {
+            $I->delete();
+        }
+        $Lesion->delete();
+
+        return redirect('/Dashboard');
+    }
+
 }

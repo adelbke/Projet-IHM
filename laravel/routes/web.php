@@ -33,7 +33,7 @@ Route::middleware('auth')->get('dash', 'CollectionController@create');
 Route::middleware('auth')->post('dash', 'CollectionController@store');
 
 Route::middleware('auth')->get('/Collections','CollectionController@index');
-Route::middleware('auth')->resource('/Lesions','LesionController')->only('show');
+Route::middleware('auth')->resource('/Lesions','LesionController')->only('show','destroy');
 Route::middleware('auth')->resource('/Image','ImageController')->only('show');
 
 Route::get('/search','SearchController@search');
