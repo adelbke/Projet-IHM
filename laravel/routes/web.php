@@ -37,6 +37,7 @@ Route::middleware('auth')->resource('/Lesions','LesionController')->only('show')
 Route::middleware('auth')->resource('/Image','ImageController')->only('show');
 
 Route::get('/search','SearchController@search');
+Route::get('/images/{Lesion}','SearchController@viewLesionImages');
 
 Route::middleware('auth','superadmin')->resource('list','UserController')->only('index','destroy','update');
 

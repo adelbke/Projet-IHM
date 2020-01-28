@@ -30,8 +30,20 @@ class DashboardController extends Controller
     {
         $dx= ['akiec','bcc','bkl','df','mel','nv','vasc'];
         $result = [];
-        foreach ($dx as $key => $value) {
-            $result[$value] = Lesion::where('dx','=',$value)->count();
+        if(auth()->user()->role=="SuperAdmin")
+        {
+            foreach ($dx as $key => $value) {
+                $result[$value] = Lesion::where('dx','=',$value)->count();
+            }    
+        }else{
+            
+            foreach ($dx as $key => $value) {
+                $result[$value] = DB::table('lesions')
+                    ->join('collections','lesions.collection_id','=','collections.id')
+                    ->where('collections.user_id','=',auth()->user()->id)
+                    ->where('lesions.dx','=',$value)
+                    ->count();
+            }    
         }
         return collect($result);
     }

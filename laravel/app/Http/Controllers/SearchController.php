@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Image;
 use App\Lesion;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -86,9 +87,27 @@ class SearchController extends Controller
 
         // dd($results->paginate(20));
         // dd($request->getRequestUri());
-        $results = $results->paginate(8)->withPath($request->getRequestUri());
+        $results = $results->paginate(8)->onEachSide(1)->withPath($request->getRequestUri());
+        // $results = $results->paginate(8)->
+
 
         return view('search',compact('results'));
 
+    }
+
+    public function viewLesionImages($id)
+    {
+        $list = Image::where('lesion_id','=',$id)->get();
+        $lesion =collect(Lesion::findOrFail($id));
+        unset($lesion["id"]);
+        unset($lesion["collection_id"]);
+        unset($lesion["created_at"]);   
+        unset($lesion["updated_at"]);
+        $lesion['dx']= config('global.lesion_dx')[$lesion['dx']];
+        $lesion['dx_type']= config('global.lesion_dx_type')[$lesion['dx_type']];
+        $lesion['localization']= config('global.lesion_localization')[$lesion['localization']];
+        $lesion['sex']= config('global.lesion_sex')[$lesion['sex']];
+
+        return view('Image.searchImageList',compact('list','lesion'));
     }
 }

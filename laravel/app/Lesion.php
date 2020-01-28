@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Lesion extends Model
 {
    protected $table = "lesions";
+   protected $guarded = [];
 
    public function images()
    {

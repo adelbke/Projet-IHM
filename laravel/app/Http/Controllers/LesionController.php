@@ -24,7 +24,7 @@ class LesionController extends Controller
     {
 
             $Collection = Collection::findOrFail($id);
-            $Lesion = Lesion::with("images")->where('collection_id','=',$Collection->id)->paginate(4);
+            $Lesion = Lesion::with("images")->where('collection_id','=',$Collection->id)->paginate(4)->onEachSide(1);
 
 
 

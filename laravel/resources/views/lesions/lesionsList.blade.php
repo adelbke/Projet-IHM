@@ -13,7 +13,7 @@
                 @foreach ($Lesion as $X)
                     <div class=" col-lg-3 col-md-4 col-6 mb-2 p-2">
                         <div class="card shadow m-1 h-100" style="">
-                            <img class="card-img-top p-1" src="{{$X->images[0]->path}}" style="width:210px;height:180px;"alt="Card image cap">
+                            <img class="card-img-top mx-auto p-1" src="{{$X->images[0]->path}}" style="max-height:180px;"alt="Card image cap">
                             <div class="card-body d-flex flex-column p-2">
                             {{-- <h5 class="card-title">{{config('app.lesion_category')[$lesion->dx]}}</h5> --}}
                                 <ul class="pl-0 mb-auto">
