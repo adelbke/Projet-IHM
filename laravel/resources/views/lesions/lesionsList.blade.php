@@ -23,7 +23,16 @@
                                     <li>-sexe: {{config('global.lesion_sex')[$X->sex]}}</li>
                                     <li>-Age: {{$X->age}}</li>
                                 </ul>
-                            <a href="{{url('/Image',['Image'=>$X->id])}}" class="btn btn-link hvr-fade d-flex align-self-end">Voir Images</a>
+
+                                <a href="{{url('/Image',['Image'=>$X->id])}}" class="btn btn-link hvr-bob hvr-underline-from-left d-flex align-self-end">Voir images</a>
+
+                            <form class=justify-content-end" method="POST" action="{{url('/Lesions',['Lesion'=>$X->id]) }}">
+                                @csrf
+                                @method('DELETE')
+                            <button type="submit" class="btn hvr-bob hvr-underline-from-left d-flex text-danger">Supprimer</button>
+                            </form>
+
+
                             </div>
                         </div>
                     </div>
