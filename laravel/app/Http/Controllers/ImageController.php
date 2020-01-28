@@ -24,4 +24,10 @@ class ImageController extends Controller
 
         return view('Image.ImagesList',compact('image'));
     }
+    public function destroy(Request $request,$id){
+        $Im=Image::findOrFail($id);
+            $Im->delete();
+
+            return redirect('/Dashboard');
+    }
 }

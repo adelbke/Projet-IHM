@@ -1,9 +1,10 @@
 @extends('layouts.dashboard')
-
+@push('title')
+		Profile
+@endpush
 @section('content')
 
 <div class="container">
-<h1 class="text-center">Profile</h1>
 <br>
 
 <table class="table">
@@ -17,7 +18,7 @@
   </tr>
   <tr>
     <td>Adresse E-Mail</td>
-    
+
   <td>{{auth()->user()->email}} </td>
   </tr>
   <tr>
@@ -26,7 +27,7 @@
       @if(auth()->user()->role=="Admin")
       Admin
       @else
-      Super Admin  
+      Super Admin
       @endif
 
 
@@ -38,7 +39,7 @@
   </tr>
 
 </table>
-</div>       
+</div>
 
 
 
