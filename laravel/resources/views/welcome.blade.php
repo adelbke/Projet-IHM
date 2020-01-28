@@ -18,16 +18,16 @@
             @guest
             <navbar-component></navbar-component>
             @endguest
-            <div style="background:linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ),url('https://cdn.pixabay.com/photo/2017/02/20/14/18/health-2082630_960_720.jpg');width:100%; background-size:cover; "
+            <div style="background:linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ),url('/images/home-banner.jpg');width:100%; background-size:cover;"
             class="container-fluid pt-5 pb-4">
 
-                <div class="row">
+                <div class="row mt-5">
                     <div class="col-md-12 mb-3 col-12">
                         <h1 class="h1 text-center text-white text-shadow"> ASIC </h1>
                         <h4 class="h4 text-center text-white">The Algerian Skin Imaging Collaboration</h4>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mb-5">
                     <div class="col-md-12 col-12">
                         <filter-component csrf="{{csrf_token()}}"></filter-component>
                     </div>
@@ -36,7 +36,13 @@
             </div>
 
         <!----------------- la partie main  ------------------------------->
-        <content-component></content-component>
+        <content-component csrf="{{csrf_token()}}"></content-component>
+
+        <footer id="sticky-footer" class="py-4 bg-light text-dark">
+            <div class="container text-center">
+                <small>Copyright &copy; ASIC</small>
+            </div>
+        </footer>
 
     </div>
     {{-- On garde ce code pour les routes de Login --}}

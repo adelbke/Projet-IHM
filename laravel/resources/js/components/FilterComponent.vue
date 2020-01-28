@@ -1,5 +1,5 @@
 <template>
-    <div class="container bg-white rounded border border-secondary shadow py-2 px-4">
+    <div data-aos="fade" class="container bg-white rounded border border-secondary shadow py-2 px-4">
         <h4 class="text-center pt-2 h5">Recherchez une image dans nôtre Collection de Bases d'images</h4>
         <div class="row">
             <div class="col-md col-12 px-2 py-2 cursor-pointer" v-for="item in this.data" v-bind:key="item.placeholder">
@@ -31,7 +31,7 @@
                 <form class="d-flex align-self-end" id="filterForm" action="/search" method="get">
                     <input type="hidden" name="_token" v-bind:value="csrf">
                     <input v-for="item in this.formData" v-bind:key="item.name" type="hidden" v-bind:value="item.value" v-bind:name="item.name">
-                    <button type="submit" value="submit" class="btn btn-primary">Filtrer</button>
+                    <button type="submit" id="FilterButton" value="submit" class="btn btn-primary">Filtrer</button>
                 </form>
             </div>
 		</div>
@@ -40,9 +40,11 @@
 
 <script>
 import Multiselect from 'vue-multiselect';
+import AOS from 'aos';
 export default {
     name:'filterComponent',
     mounted(){
+        AOS.init();
         var vm = this;
     },
     components:{
@@ -238,6 +240,7 @@ export default {
 
 <style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
 <style scoped>
+@import '~aos/dist/aos.css';
 .multiselect__option{
     overflow: hidden;
     text-overflow: ellipsis;

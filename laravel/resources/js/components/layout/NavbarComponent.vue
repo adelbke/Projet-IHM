@@ -1,12 +1,12 @@
 <template>
 <div>
-    <nav class="navbar navbar-expand-lg bg-white">
+    <nav class="navbar fixed-top navbar-expand-lg bg-white">
         <a class="navbar-brand mr-5" href="/">Logo
         </a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
             <!-- <i class="fa fab fa-facebook"></i> -->
             <!-- <i class="fas fa-hospital text-white   "></i> -->
-            <i class="fas fa-caret-down text-dark"></i>
+            <i class="fas fa-caret-down text-dark"></i><z
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
@@ -71,7 +71,7 @@ export default {
                 },
                 {
                     name:'Contact',
-                    href:'/Contact'
+                    href:'#Contact'
                 },
                 {
                     name:'À propos',
