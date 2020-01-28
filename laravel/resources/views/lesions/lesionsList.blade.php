@@ -29,7 +29,7 @@
                             <form class=justify-content-end" method="POST" action="{{url('/Lesions',['Lesion'=>$X->id]) }}">
                                 @csrf
                                 @method('DELETE')
-                            <button type="submit" class="btn hvr-bob hvr-underline-from-left d-flex text-danger">Supprimer</button>
+                            <button type="submit" onclick="return confirm('Voulez vous vraiment supprimer cette lesion ?')" class="btn hvr-bob hvr-underline-from-left d-flex text-danger">Supprimer</button>
                             </form>
 
 

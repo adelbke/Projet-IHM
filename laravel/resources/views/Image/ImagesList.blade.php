@@ -19,6 +19,11 @@
             <ul class="pl-0 mb-auto">
                 <li>Date de création : {{$i->created_at}}</li>
             </ul>
+            <form class=justify-content-end" method="POST" action="{{url('/Image',['Image'=>$i->id]) }}">
+                @csrf
+                @method('DELETE')
+            <button type="submit" onclick="return confirm('Voulez vous vraiment supprimer cette image ?')" class="btn hvr-bob hvr-underline-from-left d-flex text-danger delete">Supprimer</button>
+            </form>
 
         </div>
     </div>
