@@ -40,7 +40,7 @@
 			
 		</div>
 		<!-- Page Contact -->
-		<div class="row" id="Contact">
+		<div class="row align-items-center" id="Contact">
 			<div class="col-md-7 col-12">
 				<h2 class="text-center mt-5 h2">
 					Conactez Nous
@@ -79,8 +79,26 @@
 
 			</div>
 		</div>
-		<div class="row" id="About">
-			
+		<div class="row mt-5" id="About">
+			<div class="col-md-7 bg-light col-lg-7 col-12">
+				<div class="card">
+				  <div class="card-body">
+					<h4 class="card-title">Bienvenue à ASIC,</h4>
+					<p class="card-text">
+						Votre source numéro un pour tout ce qui concerne Imagerie Médicale. Nous nous engageons à vous offrir le meilleur de Imagerie Médicale, en mettant l'accent sur la fiabilité, le service clientèle et l'unicité.
+						Fondé en 2020 par Khoucha Madani, ASIC a parcouru un long chemin depuis ses débuts dans l'université d'Alger 1 Lorsque Khoucha Madani a débuté, sa passion pour l'Imagerie Médicale l'a conduit à Entreprendre ce Projet, et lui a donné l'impulsion nécessaire pour transformer son travail acharné et son inspiration en ASIC. Nous servons maintenant des clients partout dans le monde entier, et nous sommes ravis de faire partie de l'aile de l'industrie de l'imagerie Médicale.
+
+						Nous espérons que vous apprécierez nos images autant que nous avons plaisir à vous les offrir. Si vous avez des questions ou des commentaires, n'hésitez pas à nous contacter.
+
+						Nous vous prions d'agréer, Madame, Monsieur, l'expression de nos sentiments les meilleurs,
+						Khoucha Madani, PDG
+					</p>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-5 col-lg-5 col-12">
+				<img class="img-fluid rounded" src="/images/researcher-tools.jpg" alt="">
+			</div>
 		</div>
   	</div>
 </template>
@@ -109,6 +127,6 @@ export default {
 	border-width: 3px !important;
 }
 #Contact{
-	background: url('/images/medical-blue-banner.jpg');
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) 0% 0% / cover, url("/images/medical-blue-banner.jpg");
 }
 </style>

@@ -2688,6 +2688,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
@@ -2781,7 +2799,7 @@ __webpack_require__.r(__webpack_exports__);
         href: '#Contact'
       }, {
         name: 'À propos',
-        href: '/about'
+        href: '#About'
       }]
     };
   }
@@ -23550,7 +23568,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.i(__webpack_require__(/*! -!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!aos/dist/aos.css */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/aos/dist/aos.css"), "");
 
 // module
-exports.push([module.i, "\n.rounded-bzf[data-v-fbd30662]{\n\tborder-radius: 0.5rem !important;\n}\n.border-bottom[data-v-fbd30662]{\n\tborder-width: 3px !important;\n}\n#Contact[data-v-fbd30662]{\n\tbackground: url('/images/medical-blue-banner.jpg');\n}\n", ""]);
+exports.push([module.i, "\n.rounded-bzf[data-v-fbd30662]{\n\tborder-radius: 0.5rem !important;\n}\n.border-bottom[data-v-fbd30662]{\n\tborder-width: 3px !important;\n}\n#Contact[data-v-fbd30662]{\n\tbackground: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))) 0% 0% / cover, url(\"/images/medical-blue-banner.jpg\");\n\tbackground: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) 0% 0% / cover, url(\"/images/medical-blue-banner.jpg\");\n}\n", ""]);
 
 // exports
 
@@ -73345,7 +73363,7 @@ var render = function() {
     _vm._v(" "),
     _vm._m(3),
     _vm._v(" "),
-    _c("div", { staticClass: "row", attrs: { id: "About" } })
+    _vm._m(4)
   ])
 }
 var staticRenderFns = [
@@ -73454,104 +73472,137 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row", attrs: { id: "Contact" } }, [
-      _c("div", { staticClass: "col-md-7 col-12" }, [
-        _c("h2", { staticClass: "text-center mt-5 h2" }, [
-          _vm._v("\n\t\t\t\t\tConactez Nous\n\t\t\t\t")
+    return _c(
+      "div",
+      { staticClass: "row align-items-center", attrs: { id: "Contact" } },
+      [
+        _c("div", { staticClass: "col-md-7 col-12" }, [
+          _c("h2", { staticClass: "text-center mt-5 h2" }, [
+            _vm._v("\n\t\t\t\t\tConactez Nous\n\t\t\t\t")
+          ]),
+          _vm._v(" "),
+          _c("img", {
+            staticClass: "img-fluid",
+            attrs: { src: "/images/contact-us.svg", alt: "" }
+          })
         ]),
         _vm._v(" "),
-        _c("img", {
-          staticClass: "img-fluid",
-          attrs: { src: "/images/contact-us.svg", alt: "" }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: " col-md-5 col-12 col-lg-5" }, [
-        _c(
-          "div",
-          { staticClass: "card my-3", attrs: { "data-aos": "fade-up" } },
-          [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("\n\t\t\t\t\t\tContact\n\t\t\t\t\t")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-block" }, [
-              _c("form", { attrs: { role: "form" } }, [
-                _c("div", { staticClass: "form-group col-md-6" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "form-control-label",
-                      attrs: { for: "form-group-input" }
-                    },
-                    [_vm._v("Nom")]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: { type: "text", name: "name" }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group col-md-6" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "form-control-label",
-                      attrs: { for: "form-group-input" }
-                    },
-                    [_vm._v("E-mail")]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: { type: "text", name: "email" }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group col-md-6" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "form-control-label",
-                      attrs: { for: "form-group-input" }
-                    },
-                    [_vm._v("Raison")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "select",
-                    {
+        _c("div", { staticClass: " col-md-5 col-12 col-lg-5" }, [
+          _c(
+            "div",
+            { staticClass: "card my-3", attrs: { "data-aos": "fade-up" } },
+            [
+              _c("div", { staticClass: "card-header" }, [
+                _vm._v("\n\t\t\t\t\t\tContact\n\t\t\t\t\t")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-block" }, [
+                _c("form", { attrs: { role: "form" } }, [
+                  _c("div", { staticClass: "form-group col-md-6" }, [
+                    _c(
+                      "label",
+                      {
+                        staticClass: "form-control-label",
+                        attrs: { for: "form-group-input" }
+                      },
+                      [_vm._v("Nom")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
                       staticClass: "form-control",
-                      attrs: { size: "0", name: "reason" }
-                    },
-                    [
-                      _c("option", [_vm._v("Questions")]),
-                      _vm._v(" "),
-                      _c("option", [_vm._v("Support")])
-                    ]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group col-lg-12" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "form-control-label",
-                      attrs: { for: "form-group-input" }
-                    },
-                    [_vm._v("Notes")]
-                  ),
+                      attrs: { type: "text", name: "name" }
+                    })
+                  ]),
                   _vm._v(" "),
-                  _c("textarea", {
-                    staticClass: "form-control",
-                    attrs: { name: "notes", rows: "6" }
-                  })
+                  _c("div", { staticClass: "form-group col-md-6" }, [
+                    _c(
+                      "label",
+                      {
+                        staticClass: "form-control-label",
+                        attrs: { for: "form-group-input" }
+                      },
+                      [_vm._v("E-mail")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: { type: "text", name: "email" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group col-md-6" }, [
+                    _c(
+                      "label",
+                      {
+                        staticClass: "form-control-label",
+                        attrs: { for: "form-group-input" }
+                      },
+                      [_vm._v("Raison")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "select",
+                      {
+                        staticClass: "form-control",
+                        attrs: { size: "0", name: "reason" }
+                      },
+                      [
+                        _c("option", [_vm._v("Questions")]),
+                        _vm._v(" "),
+                        _c("option", [_vm._v("Support")])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group col-lg-12" }, [
+                    _c(
+                      "label",
+                      {
+                        staticClass: "form-control-label",
+                        attrs: { for: "form-group-input" }
+                      },
+                      [_vm._v("Notes")]
+                    ),
+                    _vm._v(" "),
+                    _c("textarea", {
+                      staticClass: "form-control",
+                      attrs: { name: "notes", rows: "6" }
+                    })
+                  ])
                 ])
               ])
+            ]
+          )
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row mt-5", attrs: { id: "About" } }, [
+      _c("div", { staticClass: "col-md-7 bg-light col-lg-7 col-12" }, [
+        _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card-body" }, [
+            _c("h4", { staticClass: "card-title" }, [
+              _vm._v("Bienvenue à ASIC,")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "card-text" }, [
+              _vm._v(
+                "\n\t\t\t\t\t\tVotre source numéro un pour tout ce qui concerne Imagerie Médicale. Nous nous engageons à vous offrir le meilleur de Imagerie Médicale, en mettant l'accent sur la fiabilité, le service clientèle et l'unicité.\n\t\t\t\t\t\tFondé en 2020 par Khoucha Madani, ASIC a parcouru un long chemin depuis ses débuts dans l'université d'Alger 1 Lorsque Khoucha Madani a débuté, sa passion pour l'Imagerie Médicale l'a conduit à Entreprendre ce Projet, et lui a donné l'impulsion nécessaire pour transformer son travail acharné et son inspiration en ASIC. Nous servons maintenant des clients partout dans le monde entier, et nous sommes ravis de faire partie de l'aile de l'industrie de l'imagerie Médicale.\n\n\t\t\t\t\t\tNous espérons que vous apprécierez nos images autant que nous avons plaisir à vous les offrir. Si vous avez des questions ou des commentaires, n'hésitez pas à nous contacter.\n\n\t\t\t\t\t\tNous vous prions d'agréer, Madame, Monsieur, l'expression de nos sentiments les meilleurs,\n\t\t\t\t\t\tKhoucha Madani, PDG\n\t\t\t\t\t"
+              )
             ])
-          ]
-        )
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-5 col-lg-5 col-12" }, [
+        _c("img", {
+          staticClass: "img-fluid rounded",
+          attrs: { src: "/images/researcher-tools.jpg", alt: "" }
+        })
       ])
     ])
   }
@@ -73578,7 +73629,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("nav", { staticClass: "navbar fixed-top navbar-expand-lg bg-white" }, [
+    _c("nav", { staticClass: "navbar navbar-expand-lg bg-white" }, [
       _c("a", { staticClass: "navbar-brand mr-5", attrs: { href: "/" } }, [
         _vm._v("Logo\n        ")
       ]),
