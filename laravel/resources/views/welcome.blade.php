@@ -38,7 +38,7 @@
         <!----------------- la partie main  ------------------------------->
         <content-component csrf="{{csrf_token()}}"></content-component>
 
-        <footer id="sticky-footer" class="py-4 bg-light text-dark">
+        <footer id="sticky-footer" class="py-4 bg-white mt-4 text-dark">
             <div class="container text-center">
                 <small>Copyright &copy; ASIC</small>
             </div>

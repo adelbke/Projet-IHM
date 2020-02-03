@@ -24,12 +24,12 @@
                                     <li>-Age: {{$X->age}}</li>
                                 </ul>
 
-                                <a href="{{url('/Image',['Image'=>$X->id])}}" class="btn btn-link hvr-bob hvr-underline-from-left d-flex align-self-end">Voir images</a>
 
                             <form class=justify-content-end" method="POST" action="{{url('/Lesions',['Lesion'=>$X->id]) }}">
                                 @csrf
                                 @method('DELETE')
-                            <button type="submit" onclick="return confirm('Voulez vous vraiment supprimer cette lesion ?')" class="btn hvr-bob hvr-underline-from-left d-flex text-danger">Supprimer</button>
+                                <a href="{{url('/Image',['Image'=>$X->id])}}" class="btn btn-link hvr-bob hvr-underline-from-left d-flex align-self-end">Voir images</a>
+                               <button type="submit" onclick="return confirm('Voulez vous vraiment supprimer cette lesion ?')" class="btn hvr-bob hvr-underline-from-left d-flex text-danger">Supprimer</button>
                             </form>
 
 
