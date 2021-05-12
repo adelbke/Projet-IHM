@@ -29,7 +29,7 @@
         "bootstrap": "^4.4.1",
         "bootstrap-css-only": "^4.3.1",
         "bootstrap-scss": "^4.4.1",
-        "chart.js": "^2.9.3",
+        "chart.js": "^2.9.4",
         "hover-text.css": "0.0.1",
         "hover.css": "^2.3.2",
         "popper.js": "^1.16.0",
